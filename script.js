@@ -15,12 +15,13 @@ let tabla = [
 for (let i = 0; i < tabla.length; i++) {
     <li><a href="#">CAMISAS</a><ul class="menu-vertical" id="camisas"></ul></li>
     let li = document.createElement('li');
-    let ul = document.createElement('ul');
-    li.appendChild(ul);
-    ul.classList.add('menu-vertical');
     let text = document.createElement('a');
     text.innerText = tabla[i][0];
-    ul.appendChild(text);
+    li.appendChild(text);
+    let ul = document.createElement('ul');
+    li.appendChild(ul);
+    ul.classList.toggle('menu-vertical');
+   
     menu_horizontal.appendChild(ul);
 
 
