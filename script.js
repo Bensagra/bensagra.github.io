@@ -6,6 +6,10 @@ let chinos = document.getElementById("chinos");
 let denim = document.getElementById("denim");
 let hombre = document.getElementById("hombre");
 let mujer = document.getElementById("mujer");
+let navegacion = document.getElementById("navegacion");
+
+
+
 let tabla = [
     //camisas
     ["Camisas",],
@@ -47,6 +51,11 @@ for (let i = 0; i < tabla.length; i++) {
 }
 armarLi("Sobre nosotros","menu-vertical");
 armarLi("contacto","menu-vertical");
+
+function cambiarClase(){
+    navegacion.classList.remove("navigator");
+    navegacion.classList.add("navigator-stick");
+}
 
 function asignar(i,j, li){
 

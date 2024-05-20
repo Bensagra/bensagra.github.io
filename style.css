@@ -33,10 +33,21 @@ body{
 .navegacion{
 	width: 100%;
     display: flex;
+	position: sticky;
     justify-content: space-around;
     align-items: center;
+    top: 0px;
     
-    
+}
+
+.navegacion-stick{
+	width: 100%;
+	position: fixed;
+	display: flex;
+	justify-content: space-around;
+    align-items: center;
+	bottom: 100px;
+
 }
 
 .navegacion nav{
@@ -47,6 +58,11 @@ body{
     align-items: start;
     
     
+}
+
+.messi{
+	height: 2000px;
+	width: 250px;
 }
 
 .navegacion nav ul{
