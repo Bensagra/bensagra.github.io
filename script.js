@@ -1,46 +1,48 @@
-let li_camisas = document.getElementById('camisas');
-let li_sastreria = document.getElementById('sastreria');
-let li_pantalones = document.getElementById('pantalones');
-let li_denim = document.getElementById('denim');
-let li_chinos = document.getElementById('chinos');
-let li_hombre = document.getElementById('hombre');
-let li_mujer = document.getElementById('mujer');
+let menu_horizontal = document.getElementById('menu-horizontal');
 let tabla = [
     //camisas
-    ["Formales", "Casuales", "Franelas"],
+    ["Camisas","Formales", "Casuales", "Franelas"],
     //sastreria
-    ["Trajes", "Sacos", "Chalecos"],
+    ["Sastreria","Trajes", "Sacos", "Chalecos"],
     //pantalones
-    ["Denim", "Chinos","Formales"],
+    ["Pantalones","Denim", "Chinos","Formales"],
     //denim
-    ["Hombre", "Mujer"],
+    ["Denim","Hombre", "Mujer"],
     //chinos
-    ["Hombre", "Mujer"],
+    ["Chinos","Hombre", "Mujer"],
 ]
 
 for (let i = 0; i < tabla.length; i++) {
-    for (let j = 0; j < tabla[i].length; j++) {
+    let ul = document.createElement('li');
+    ul.classList.add('menu-vertical');
+    let text = document.createElement('a');
+    text.innerText = tabla[i][0];
+    ul.appendChild(text);
+    menu_horizontal.appendChild(ul);
+
+
+    for (let j = 1; j < tabla[i].length; j++) {
         if (tabla[i][j] == tabla[0][j]) {
-            asignar(i,j,li_camisas);
+            asignar(i,j,ul);
             
         }else if (tabla[i][j] == tabla[1][j]) {
-           asignar(i,j ,li_sastreria);
+           asignar(i,j ,ul);
             }
         else if (tabla[i][j] == tabla[2][j]) {
-           asignar(i,j ,li_pantalones);
+           asignar(i,j ,ul);
             }
         else if (tabla[i][j] == tabla[3][j]) {
-           asignar(i,j ,li_denim);
+           asignar(i,j ,ul);
             }
         
         else if (tabla[i][j] == tabla[4][j]) {
-           asignar(i,j ,li_chinos);
+           asignar(i,j ,ul);
            }
         else if (tabla[i][j] == tabla[5][j]) {
-           asignar(i,j ,li_hombre);
+           asignar(i,j ,ul);
             }
             else if (tabla[i][j] == tabla[6][j]) {
-                asignar(i,j ,li_mujer);
+                asignar(i,j ,ul);
                  }
         }
 
