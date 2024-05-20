@@ -91,6 +91,7 @@ body{
 
 .navegacion nav ul li:hover .submenu{
 	display: flex;
+    align-items: center;
     justify-content: center;
     
 }
@@ -98,6 +99,7 @@ body{
 .navegacion nav ul li .submenu .submenu-items{
 	margin: 0 20px;
     display: flex;
+    flex-direction: row;
     justify-content: center;
 
 }
