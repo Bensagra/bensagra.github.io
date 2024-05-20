@@ -60,11 +60,9 @@ body{
     
 }
 
-.messi{
-	height: 2000px;
-	width: 250px;
-}
+.navegacion nav ul li a:hover{
 
+}
 .navegacion nav ul{
 	list-style: none;
 	position: relative;
@@ -92,6 +90,7 @@ body{
 
 .navegacion nav > ul > li:hover span{
 	display: block;
+	
 }
 
 .navegacion nav ul li .submenu{
@@ -108,6 +107,7 @@ body{
 	display: flex;
     align-items: center;
     justify-content: center;
+	
     
 }
 
@@ -115,17 +115,20 @@ body{
 	margin: 0 20px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    
 
 }
-
+.navegacion nav ul li .submenu .submenu-items li a{
+	display: flex;
+	justify-content: space-around;
+}
 .navegacion nav ul li .submenu .submenu-items p{
 	font-weight: bold;
-	width: 110px;
+	width: 100px;
 	display: flex;
-	padding-bottom: 5px;
+	padding-bottom: 10px;
 	border-bottom: 1px solid black;
-	margin-bottom: 30px;
+	margin-bottom: 70px;
 }
 
 .navegacion nav ul li .submenu .submenu-items a{

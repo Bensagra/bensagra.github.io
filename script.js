@@ -1,13 +1,15 @@
 let menu_horizontal = document.getElementById('menu-horizontal');
 let camisas = document.getElementById("camisas");
 let sastreria = document.getElementById("sastreria");
-let pantalones = document.getElementById("pantalones");
-let chinos = document.getElementById("chinos");
-let denim = document.getElementById("denim");
+let pantalones = document.getElementById("pantalon");
+let sobreNosotros = document.getElementById("sobreNosotros");
+let contacto = document.getElementById("contacto");
 let hombre = document.getElementById("hombre");
 let mujer = document.getElementById("mujer");
 let navegacion = document.getElementById("navegacion");
-
+let ul_document = [
+camisas,sastreria,pantalones,hombre,mujer,sobreNosotros,contacto,
+]
 
 
 let tabla = [
