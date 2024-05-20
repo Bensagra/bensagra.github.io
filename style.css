@@ -45,8 +45,7 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: start;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
+    
     
 }
 
