@@ -13,7 +13,10 @@ let tabla = [
 ]
 
 for (let i = 0; i < tabla.length; i++) {
-    let ul = document.createElement('li');
+    <li><a href="#">CAMISAS</a><ul class="menu-vertical" id="camisas"></ul></li>
+    let li = document.createElement('li');
+    let ul = document.createElement('ul');
+    li.appendChild(ul);
     ul.classList.add('menu-vertical');
     let text = document.createElement('a');
     text.innerText = tabla[i][0];
@@ -23,26 +26,26 @@ for (let i = 0; i < tabla.length; i++) {
 
     for (let j = 1; j < tabla[i].length; j++) {
         if (tabla[i][j] == tabla[0][j]) {
-            asignar(i,j,ul);
+            asignar(i,j,li);
             
         }else if (tabla[i][j] == tabla[1][j]) {
-           asignar(i,j ,ul);
+           asignar(i,j ,li);
             }
         else if (tabla[i][j] == tabla[2][j]) {
-           asignar(i,j ,ul);
+           asignar(i,j ,li);
             }
         else if (tabla[i][j] == tabla[3][j]) {
-           asignar(i,j ,ul);
+           asignar(i,j ,li);
             }
         
         else if (tabla[i][j] == tabla[4][j]) {
-           asignar(i,j ,ul);
+           asignar(i,j ,li);
            }
         else if (tabla[i][j] == tabla[5][j]) {
-           asignar(i,j ,ul);
+           asignar(i,j ,li);
             }
             else if (tabla[i][j] == tabla[6][j]) {
-                asignar(i,j ,ul);
+                asignar(i,j ,li);
                  }
         }
 
