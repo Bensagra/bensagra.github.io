@@ -1,4 +1,5 @@
 let menu_horizontal = document.getElementById('menu-horizontal');
+
 let camisas = document.getElementById("camisas");
 let sastreria = document.getElementById("sastreria");
 let pantalones = document.getElementById("pantalon");
@@ -9,6 +10,7 @@ let mujer = document.getElementById("mujer");
 let navegacion = document.getElementById("navegacion");
 let camisasHtml = document.getElementById("ropa");
 var map = L.map('map').setView( [-34.568173,-58.455661],14.5);
+
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 
             }).addTo(map);
@@ -22,7 +24,7 @@ let camisas_tabla = [
     ["Camisa de gamuza","20.000","descripcion","/images/remera.jfif"],
   
 ];
-
+let markerGroup = L.featureGroup().addTo(map);
 cargarCamisas();
 let tabla = [
     //camisas
