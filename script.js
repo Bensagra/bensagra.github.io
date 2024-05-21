@@ -9,12 +9,7 @@ let hombre = document.getElementById("hombre");
 let mujer = document.getElementById("mujer");
 let navegacion = document.getElementById("navegacion");
 let camisasHtml = document.getElementById("ropa");
-var map = L.map('map').setView( [-34.568173,-58.455661],14.5);
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                
-            }).addTo(map);
-            L.marker([-34.568173,-58.455661]).addTo(map).bindPopup(`Turkey indumentarias`).openPopup();
 let ul_document = [
 camisas,sastreria,pantalones,hombre,mujer,sobreNosotros,contacto,
 ]
@@ -24,7 +19,7 @@ let camisas_tabla = [
     ["Camisa de gamuza","20.000","descripcion","/images/remera.jfif"],
   
 ];
-let markerGroup = L.featureGroup().addTo(map);
+
 cargarCamisas();
 let tabla = [
     //camisas
