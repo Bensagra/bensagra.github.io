@@ -241,13 +241,16 @@ flex-direction: row;
 	justify-content: space-around;
 	flex-direction: column;
 	list-style: none;
-	height: 200px;
+	font-size: 20px;
+	height: 400px;
 
 }
 
 .contacto{
 	display: flex;
-	justify-content: start;
+	justify-content: space-around;
+	font-size: 20px;
+height: 200px;
 	flex-direction: column;
 	list-style: none;
 }
