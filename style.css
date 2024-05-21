@@ -222,3 +222,32 @@ body{
 	display: flex;
 	justify-content: space-around;
 }
+
+.informacion{
+	display: flex;
+justify-content: space-around;
+flex-direction: row;
+}
+
+.text_informacion{
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	width: 50%
+}
+
+.horarios{
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	list-style: none;
+	height: 200px;
+
+}
+
+.contacto{
+	display: flex;
+	justify-content: start;
+	flex-direction: column;
+	list-style: none;
+}

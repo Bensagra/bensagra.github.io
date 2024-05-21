@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontello.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 500px;
+            width: 500px}
+    </style>
 </head>
 <body>
     <div class="logo"><img class="logoImage" src="images/images.png" alt="Logo"></div>
@@ -70,6 +77,23 @@
             </ul>
         </nav>
         </div>
+        
+        <div class="informacion">
+            <div class="text_informacion">
+                <ul class="contacto"> <li>Dirección: Virrey del Pino 2706, Cdad. Autónoma de Buenos Aires</li>
+                    <li>Numero telefonico: 011 4787-5906</li><li>Whatsapp:11-5326-4138</li></ul>
+                <ul class="horarios"> 
+                    <li>Horarios</li>
+                    <li> Lunes   10 a.m.–7 p.m.</li>
+                    <li> Martes  10 a.m.–7 p.m.</li>
+                    <li> Miércoles   10 a.m.–7 p.m.</li>
+                    <li> Jueves  10 a.m.–7 p.m.</li>
+                    <li> Viernes 10 a.m.–7 p.m.</li>
+                    <li> Sabado 10 a.m.–7 p.m.</li>
+                    <li> Domingo	Cerrado</ul>
+            </div>
+            <div id="map"></div>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <script src="script.js"></script>  
 </body>
 </html>
