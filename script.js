@@ -9,6 +9,7 @@ let hombre = document.getElementById("hombre");
 let mujer = document.getElementById("mujer");
 let navegacion = document.getElementById("navegacion");
 let camisasHtml = document.getElementById("ropa");
+let body = document.getElementById("body");
 
 let ul_document = [
 camisas,sastreria,pantalones,hombre,mujer,sobreNosotros,contacto,
@@ -32,7 +33,12 @@ let tabla = [
     //pantalones
     ["Pantalones","Chino's", "Denim", "Bermudas", ],
 ]
+//function comprobarAncho(){
+    //if (window.innerWidth < window.innerHeight) {
+    //    body.remove(document.getElementById("navegacion"));
 
+  //  }
+//}
 for (let i = 0; i < tabla.length; i++) {
 
     for (let j = 1; j < tabla[i].length; j++) {
