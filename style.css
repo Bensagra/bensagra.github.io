@@ -194,7 +194,8 @@ body{
 	justify-content: space-around;
 	align-items: center;
 	flex-direction: column;
-	border: 1px solid #000000;
+	flex-wrap: wrap;
+	margin-bottom: 30px;
 }
 
 .ropa-image{
@@ -241,6 +242,8 @@ body{
 	display: flex;
 	justify-content: space-around;
 }
+
+
 
 .informacion{
 	display: flex;

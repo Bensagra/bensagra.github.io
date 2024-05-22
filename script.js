@@ -15,8 +15,11 @@ camisas,sastreria,pantalones,hombre,mujer,sobreNosotros,contacto,
 ]
 let camisas_tabla = [
     ["Camisa","$20,000","descripcion","/images/remera.png","Gamuza"],
-    ["Camisa de gamuza","$20,000","descripcion","/images/remera.png","Gamuza"],
-    ["Camisa de gamuza","$20,000","descripcion","/images/remera.png","Gamuza"],
+    ["Camisa","$20,000","descripcion","/images/remera.png","Gamuza"],
+    ["Camisa","$20,000","descripcion","/images/remera.png","Gamuza"],
+    ["Camisa","$20,000","descripcion","/images/remera.png","Gamuza"],
+    ["Camisa","$20,000","descripcion","/images/remera.png","Gamuza"],
+    ["Camisa","$20,000","descripcion","/images/remera.png","Gamuza"],
   
 ];
 
