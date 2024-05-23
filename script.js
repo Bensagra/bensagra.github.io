@@ -8,23 +8,16 @@ let contacto = document.getElementById("contacto");
 let hombre = document.getElementById("hombre");
 let mujer = document.getElementById("mujer");
 let navegacion = document.getElementById("navegacion");
-let camisasHtml = document.getElementById("ropa");
+
 let body = document.getElementById("body");
 
 let ul_document = [
 camisas,sastreria,pantalones,hombre,mujer,sobreNosotros,contacto,
 ]
-let camisas_tabla = [
-    ["Camisa","$20,000","descripcion","/images/remera.png","Gamuza"],
-    ["Camisa","$20,000","descripcion","/images/remera.png","Gamuza"],
-    ["Camisa","$20,000","descripcion","/images/remera.png","Gamuza"],
-    ["Camisa","$20,000","descripcion","/images/remera.png","Gamuza"],
-    ["Camisa","$20,000","descripcion","/images/remera.png","Gamuza"],
-    ["Camisa","$20,000","descripcion","/images/remera.png","Gamuza"],
-  
-];
 
-cargarCamisas();
+
+
+
 let tabla = [
     //camisas
     ["Camisas",],
