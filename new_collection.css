@@ -1,0 +1,27 @@
+.newCollection{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-color:#f3f0eb ;
+    height: 850px;
+}
+
+.newCollectionImages{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.newCollectionImage{
+    width: 350px;
+    height: 550px;
+
+}
+
+.newCollectionText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

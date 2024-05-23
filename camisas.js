@@ -11,13 +11,6 @@ let camisas_tabla = [
 
 
 function cargarCamisas(){
-    //<div class="fila1">
-      //  <div class="ropa">
-        //    <img src="/images/remera.jfif" alt="" class="ropa-image">
-          //  <div class="ropa-texto">
-            //    <p class="ropa-title">Remera oversize</p>
-              //  <p>20.000 pesos</p>
-           // </div>
            let div = document.createElement('div');
            div.classList.add('fila1');
            for (let i = 0; i < camisas_tabla.length; i++) {

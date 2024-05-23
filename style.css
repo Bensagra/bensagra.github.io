@@ -74,6 +74,21 @@ body{
 
 }
 
+.fotosPortada{
+	.ropa{
+		height: 450px;
+		width: 350px;
+		background-color: #fff;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-direction: column;
+		flex-wrap: wrap;	
+		margin: 30px 30px;
+		
+	}
+}
+
 .navegacion nav > ul > li > a{
 	color: #fff;
 	text-decoration: none;
@@ -277,4 +292,22 @@ flex-direction: row;
 height: 200px;
 	flex-direction: column;
 	list-style: none;
+}
+
+.nuestraMaestria{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 700px;
+	width: 100%;
+	background-color: black;
+}
+
+.nuestraMaestriaText{
+	color: white;
+	height: 300px;
+	display: flex; 
+	flex-direction: column;
+	justify-content: space-around;
+	font-size: 35px;
 }
