@@ -1,5 +1,5 @@
 let menu_horizontal = document.getElementById('menu-horizontal');
-
+let video = document.getElementById('video');
 let camisas = document.getElementById("camisas");
 let sastreria = document.getElementById("sastreria");
 let pantalones = document.getElementById("pantalon");
@@ -16,7 +16,10 @@ camisas,sastreria,pantalones,hombre,mujer,sobreNosotros,contacto,
 ]
 
 
+function desaparecer(){
+location.href = "/index.html";
 
+}
 
 let tabla = [
     //camisas
