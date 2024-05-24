@@ -18,7 +18,7 @@ camisas,sastreria,pantalones,hombre,mujer,sobreNosotros,contacto,
 
 
 function desaparecer(){
-video.style.display = "none";
+location.href = "/index.html"
 }
 
 
