@@ -41,6 +41,33 @@ body{
     
 }
 
+.newCollectionImage{
+	
+}
+
+.botonesEnlace{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 500px;
+	background-color: black;
+	border: 2px solid black;
+
+}
+
+.botonesEnlaceItem {
+background-color: #ff8610;
+color: #ffff;
+width: 300px;
+height: 370px;
+display: flex;
+justify-content: space-around;
+align-items: center;
+flex-direction: column;
+
+
+}
+
 .navegacion-stick{
 	width: 100%;
 	position: fixed;
