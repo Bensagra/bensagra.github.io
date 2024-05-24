@@ -1,3 +1,4 @@
+
 let menu_horizontal = document.getElementById('menu-horizontal');
 let video = document.getElementById('video');
 let camisas = document.getElementById("camisas");
@@ -17,9 +18,9 @@ camisas,sastreria,pantalones,hombre,mujer,sobreNosotros,contacto,
 
 
 function desaparecer(){
-location.href = "/index.html";
-
+video.style.display = "none";
 }
+
 
 let tabla = [
     //camisas

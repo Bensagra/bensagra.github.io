@@ -261,6 +261,18 @@ body{
 	flex-wrap: wrap;
 }
 
+.video{
+	background-color: black;
+	width: 100%;
+
+}
+ ::-webkit-scrollbar {
+    display: none;
+	animation-delay: 3s;
+	display: block;
+}
+
+
 
 
 .informacion{
