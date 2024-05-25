@@ -1,0 +1,26 @@
+.informacion{
+	display: flex;
+justify-content: space-around;
+align-items: center;
+margin-top: 10vh;
+flex-direction: row;
+background-color: black;
+}
+
+.text_informacion{
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	width: 60vw;
+    color: white;
+}
+
+.horarios{
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	list-style: none;
+	font-size: 20px;
+	height: 50vh;
+
+}
