@@ -59,7 +59,9 @@
 		border: 2px solid black;
 	
 	}
-	
+	.navegacionMovil{
+		display: none;
+	}
 	.botonesEnlaceItem {
 		view-timeline-name: --image;
 		view-timeline-axis: block;
