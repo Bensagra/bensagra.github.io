@@ -15,9 +15,18 @@
         flex-direction: row;
 		justify-content:start;
 		background-color: black;
+        z-index: 1;
+        top: 0;
+        position: sticky;
 	   
 	
 		}
+
+        .logoImageMovil{
+            height: 10vh;
+            width: auto;
+        }
+        
 
 		nav ul{
 			display: flex;
