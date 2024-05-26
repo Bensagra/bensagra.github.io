@@ -27,7 +27,8 @@
         .logoImageMovil{
           display: flex;
           align-items: start;
-          width: 5vh;
+            justify-content: start;
+          width: 5vw;
         }
         
 
@@ -67,6 +68,8 @@
 
 .navBarButton{
     color: white;
+    width: 30vw;
+    display: flex;
 }
 
 .imagenNavegacionMovil{
