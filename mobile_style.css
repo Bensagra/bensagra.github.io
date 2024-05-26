@@ -7,24 +7,27 @@
 		background-color: black;
 	}
 	
+    *{
+        width: 100vw;
+    }
 	
 	.logo{
-		width: 100%vw;
+		width: 100vw;
 		height: 15vh;
 		display: flex;
         flex-direction: row;
-		justify-content:start;
+		justify-content:space-around;
+        align-items: start;
 		background-color: black;
-        z-index: 1;
-        top: 0;
-        position: sticky;
+       
 	   
 	
 		}
 
         .logoImageMovil{
-            height: 10vh;
-            width: auto;
+          display: flex;
+          align-items: start;
+          width: 5vh;
         }
         
 
@@ -84,11 +87,7 @@
 			
 		}
 
-		.logo{
-			display: flex;
-			justify-content: space-around;
-		}
-
+	
 
         .slider-frame {
             width: 90vw;
@@ -98,6 +97,10 @@
             overflow: hidden;
             background-color: #121212;
             
+        }
+
+        html{
+            width: 100vw;
         }
 	
 }
