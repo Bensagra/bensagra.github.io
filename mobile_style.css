@@ -78,5 +78,16 @@
 			display: flex;
 			justify-content: space-around;
 		}
+
+
+        .slider-frame {
+            width: 90vw;
+            height: auto;
+            margin:50px auto 0;
+            margin-top: 0px;
+            overflow: hidden;
+            background-color: #121212;
+            
+        }
 	
 }
