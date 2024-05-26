@@ -11,6 +11,10 @@
 		height: 100vh;
 		background-color: black;
 	}
+
+	.logo h1{
+		display: none;
+	}
 	
 	.botonera{
 		display: flex;
@@ -483,34 +487,3 @@
 }
 
 
-@media (max-width: 1350px){
-
-	
-	body{
-		width: 100vw;
-		height: 100vh;
-		background-color: black;
-	}
-	
-	
-	.logo{
-		width: 100%vw;
-		height: 15vh;
-		display: flex;
-		justify-content: center;
-		background-color: black;
-	   
-	
-		}
-
-		.navegacion{
-			z-index: 1;
-			width: 100vw;
-			display: flex;
-			
-			justify-content: space-around;
-			align-items: center;
-			
-		}
-	
-}

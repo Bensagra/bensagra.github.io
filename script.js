@@ -9,7 +9,8 @@ let contacto = document.getElementById("contacto");
 let hombre = document.getElementById("hombre");
 let mujer = document.getElementById("mujer");
 let navegacion = document.getElementById("navegacion");
-
+let navBarButton = document.getElementById("navBarButton");
+let navBarButtonClose = document.getElementById("navBarButtonClose");
 let body = document.getElementById("body");
 
 let ul_document = [
@@ -21,6 +22,16 @@ function desaparecer(){
 location.href = "/index.html"
 }
 
+navBarButton.addEventListener("click", visible);
+navBarButtonClose.addEventListener("click", close);
+
+
+function visible (){
+    navegacion.classList.toggle("navegacion-visible");
+}
+function close (){
+    navegacion.classList.remove("navegacion-visible");
+}
 
 let tabla = [
     //camisas
