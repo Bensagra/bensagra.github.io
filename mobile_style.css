@@ -21,8 +21,10 @@
 		nav ul{
 			display: flex;
             flex-direction: column;
+            justify-content: space-around;
 			list-style: none;
             padding-left: 5px;
+            height: 30vh;
 
 			
 		}
@@ -30,17 +32,21 @@
             position: absolute;
             top: 0;
             left: 0;
+            justify-content: space-around;
             align-items: start;
-            background-color: #ff8610;
+            background-color: black;
             height: 100vh;
-            width: 30vw;
+            width: 60vw;
             font-size: 15px;
             box-shadow: 0 0 0 100vmax rgb(0, 0, 0, 0.5);
 
             opacity: 0;
             visibility: hidden;
         }
-		
+		span{
+            display: none;
+        }
+        i{color: white;}
         .navegacion-visible{
             opacity: 1;
           visibility: visible;
@@ -48,6 +54,18 @@
 
 .navBarButton{
     color: white;
+}
+
+.imagenNavegacionMovil{
+    width: 25vw;
+}
+
+.navegacionMovil{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 10px;
 }
         
 		nav ul li a{
