@@ -4,11 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="fontello.css">
+    <link rel="stylesheet" href="/home/style.css">
+
+    <link rel="stylesheet" href="contacto.css">
+    <link rel="stylesheet" href="/fontello.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 50vh;
+            width: 50vh}
+    </style>
 </head>
-<body id="body">
-    <div class="logo"><img class="logoImage" src="/images/images.png" alt="Logo"></div>
+<body>
+    <div class="logo"><img class="logoImage" src="images/images.png" alt="Logo"></div>
     <div class="navegacion" id="navegacion">
         <nav>
             <ul>
@@ -71,8 +79,24 @@
             </ul>
         </nav>
         </div>
-        <div id="ropa"></div>
-        <script src="camisas.js"></script>
-    <script src="script.js"></script>
+        
+        <div class="informacion">
+            <div class="text_informacion">
+                <ul class="contacto"> <li>Dirección: Virrey del Pino 2706, Cdad. Autónoma de Buenos Aires</li>
+                    <li>Numero telefonico: 011 4787-5906</li><li>Whatsapp:11-5326-4138</li><li>Email:Info@turkeyhombre.com.ar</li></ul>
+                <ul class="horarios"> 
+                    <li>Horarios</li>
+                    <li> Lunes   10 a.m.–7 p.m.</li>
+                    <li> Martes  10 a.m.–7 p.m.</li>
+                    <li> Miércoles   10 a.m.–7 p.m.</li>
+                    <li> Jueves  10 a.m.–7 p.m.</li>
+                    <li> Viernes 10 a.m.–7 p.m.</li>
+                    <li> Sabado 10 a.m.–7 p.m.</li>
+                    <li> Domingo	Cerrado</ul>
+            </div>
+            <div id="map"></div>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        
+        <script src="/mapa.js"></script>  
 </body>
 </html>
