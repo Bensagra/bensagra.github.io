@@ -19,7 +19,7 @@ camisas,sastreria,pantalones,hombre,mujer,sobreNosotros,contacto,
 
 
 function desaparecer(){
-location.href = "/index.html"
+location.href = "/home/index.html"
 }
 
 navBarButton.addEventListener("click", visible);
