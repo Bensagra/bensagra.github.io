@@ -14,7 +14,6 @@ function cargarCamisas(){
            let div = document.createElement('div');
            div.classList.add('fila1');
            for (let i = 0; i < camisas_tabla.length; i++) {
-            console.log(div.children);
           crearWidget(div,i);
 }
 
