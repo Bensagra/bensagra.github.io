@@ -68,9 +68,11 @@
 
 .navBarButton{
     color: white;
-    width: 30vw;
-    display: flex;
+    width: 1px;
+    position: absolute;
+    left: 4vh;
 }
+
 
 .imagenNavegacionMovil{
     width: 25vw;
@@ -106,4 +108,9 @@
             width: 100vw;
         }
 	
+}
+        .newCollectionTitle {
+    font-size:small;
+    text-align: center;
+
 }
