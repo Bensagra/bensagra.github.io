@@ -1,7 +1,7 @@
 @media (min-width: 1350px){
 	.logoImage{
 		width: 15vw;
-		height: 22vh;
+		height: 26vh;
 		background-color: black;
 		
 	}
@@ -26,8 +26,8 @@
 		
 	}
 	.logo{
-		width: 100%vw;
-		height: 15vh;
+		width: 100vw;
+		height: 20vh;
 		display: flex;
 		justify-content: center;
 		background-color: black;
