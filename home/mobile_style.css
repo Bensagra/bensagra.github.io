@@ -12,11 +12,11 @@
     }
 	
 	.logo{
-		width: 50vw;
+		width: 100vw;
 		height: 30vh;
 		display: flex;
         justify-content: space-around;
-        justify-content: space-between;
+    
 		background-color: black;
         
        
@@ -26,6 +26,15 @@
 
         .botonMenu{
             height: 25vh;
+            width: 10vw;
+            font-size: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .botonMenuAbierto{
+            height: 10vh;
             width: 10vw;
             font-size: 25px;
             display: flex;
@@ -57,6 +66,7 @@
 			
 		}
         .navegacion{
+            z-index: 1;
             position: absolute;
             top: 0;
             left: 0;
