@@ -208,6 +208,21 @@
             animation-range: entry 25% cover 40%;
             animation-fill-mode: both;
         }
+
+       .navegacion-stick{
+		width: 100vw;
+		position: fixed;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		bottom: 100px;
+	
+	}
+
+    .nuestraMaestria{
+        display: none;
+    }
+    
 }
 
 
