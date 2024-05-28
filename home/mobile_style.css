@@ -32,10 +32,10 @@
             justify-content: center;
             align-items: center;
         }
-.logoImage{
+    .logoImage{
     width: 40vw;
     height: 25vh;
-}
+    }
         
 
         .logoImageMovil{
@@ -121,11 +121,84 @@
         html{
             width: 100vw;
         }
-	
-}
-        .newCollectionTitle {
-    font-size:small;
-    text-align: center;
+        .newCollection{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            background-color:black ;
+            height: 850px;
+          
+            
+        }
+        .newCollectionTitle{
+            display: flex;
+            color: #f3f0eb;
+            align-items: center;
+            justify-content: space-around;
+            width: 100vw;
+            font-size: 30px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .newCollectionImages{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;   
+        }
+        
+        .newCollectionImage{
+            width: 350px;
+            height: 550px;
+        
+        }
+        
+        .newCollectionText{
+            display: flex;
+            color: #f3f0eb;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px; margin-bottom: 40px;
+        }
 
+
+
+        @keyframes show{
+            from {
+                opacity: 0;
+                scale: 0%;
+            }
+        
+            to{
+                opacity: 1;
+                scale: 100%;
+            }
+        }
+ 
+        img{
+            view-timeline-name: --image;
+            view-timeline-axis: block;
+            animation-timeline: --image;
+            animation-name: show;
+            animation-range: entry 25% cover 40%;
+            animation-fill-mode: both;
+        }
+        
+        .tarjetaInformacion{
+            
+            view-timeline-name: --image;
+            view-timeline-axis: block;
+            animation-timeline: --image;
+            animation-name: show;
+            animation-range: entry 25% cover 40%;
+            animation-fill-mode: both;
+        }
 }
+
+
 
