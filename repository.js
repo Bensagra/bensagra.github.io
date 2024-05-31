@@ -30,7 +30,13 @@ var jsonTexto = [{
 }]
 
 
-let productos = [];
+let productos = [
+    producto = {
+        product_name: "peppe",
+        product_title: ""
+    }
+
+];
 let producto = {
     product_name : "",
     product_title : "",
@@ -43,7 +49,8 @@ let producto = {
 }
 
 for (let i = 0; i < jsonTexto.length; i++) {
- let newProduct ={
+
+let newProduct ={
     product_name : jsonTexto[i].product_name,
     product_title : jsonTexto[i].product_title,
     product_description : jsonTexto[i].product_description,
@@ -52,11 +59,11 @@ for (let i = 0; i < jsonTexto.length; i++) {
     product_price : jsonTexto[i].product_price,
     product_subcategory_id : jsonTexto[i].product_subcategory_id,
     product_gender_id : jsonTexto[i].product_gender_id
- }
+}
 
     productos.push(newProduct);
 
-   
+
 
     
 }
