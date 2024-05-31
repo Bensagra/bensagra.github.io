@@ -30,7 +30,13 @@ var jsonTexto = [{
 }]
 
 
-let productos = [];
+let productos = [
+    producto = {
+        product_name: "peppe",
+        product_title: ""
+    }
+
+];
 let producto = {
     product_name,
     product_title,
@@ -42,6 +48,7 @@ let producto = {
     product_gender_id,
 }
 
-for (let index = 0; index < jsonTexto.length; index++) {
-    producto.product_name = jsonTexto["product_name"]    
+for (let i = 0; i < jsonTexto.length; i++) {
+    const element = array[i];
+    
 }
