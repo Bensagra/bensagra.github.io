@@ -2,9 +2,9 @@
 
 	
 	body{
-		width: 100vw;
-		height: 100vh;
+		size: 100%;
 		background-color: black;
+
 	}
 	
     *{
@@ -131,7 +131,9 @@
 }
 
 .NewCollectionImages {
-    width: 30px;
-    height: 30px;
+    width: 100%;
+  
+    display: flex;
+    justify-content: space-around;
     
 }
