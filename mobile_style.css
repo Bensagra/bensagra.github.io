@@ -130,10 +130,11 @@
 
 }
 
-.NewCollectionImages {
-    width: 100%;
-  
+.newCollectionImages {
     display: flex;
     justify-content: space-around;
+    max-width: 10%; 
+    max-height: auto; 
+    object-fit: cover;
     
 }
