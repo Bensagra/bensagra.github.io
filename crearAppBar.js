@@ -1,4 +1,17 @@
-// Crear elementos
+const domContainer = document.querySelector('#like_button_container');
+const root = ReactDOM.createRoot(domContainer);
+root.render(e(LikeButton));
+
+function e() {
+    return (
+        <h1>HOla</h1>
+    )
+}
+
+
+
+
+
 const logoDiv = document.createElement("div");
 logoDiv.classList.add("logo");
 

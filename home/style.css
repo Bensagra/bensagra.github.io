@@ -382,7 +382,7 @@
 		
 	}
 	
-	.index img{
+	 img{
 		view-timeline-name: --image;
 		view-timeline-axis: block;
 		animation-timeline: --image;
