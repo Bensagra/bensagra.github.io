@@ -19,9 +19,6 @@
     
 		background-color: black;
         
-       
-	   
-	
 		}
 
         .botonMenu{
@@ -175,8 +172,11 @@
             justify-content: center;
             font-size: 35px; margin-bottom: 40px;
         }
-
-
+        
+        .img{
+            align-self: flex-end;
+        }
+        
 
         @keyframes show{
             from {
