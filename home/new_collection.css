@@ -8,8 +8,7 @@
     width: 100%;
     background-color:black ;
     height: 850px;
-    z-index: 0;
-  
+}  
     
 
 .newCollectionTitle{
@@ -41,4 +40,5 @@
     align-items: center;
     justify-content: center;
     font-size: 35px; margin-bottom: 40px;
-}}}
+}
+}
