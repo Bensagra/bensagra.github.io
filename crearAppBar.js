@@ -1,13 +1,4 @@
-const domContainer = document.querySelector('#like_button_container');
-const root = ReactDOM.createRoot(domContainer);
-root.render(e(LikeButton));
-
-function e() {
-    return (
-        <h1>HOla</h1>
-    )
-}
-
+let barras = document.getElementById("barraNavegacion");
 
 
 
@@ -93,5 +84,5 @@ navegacionDiv.appendChild(botonMenuMovilDiv);
 navegacionDiv.appendChild(nav);
 
 // Agregar elementos al cuerpo del documento
-document.body.appendChild(logoDiv);
-document.body.appendChild(navegacionDiv);
+barras.appendChild(logoDiv);
+barras.appendChild(navegacionDiv);
