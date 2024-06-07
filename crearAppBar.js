@@ -1,4 +1,5 @@
 let barras = document.getElementById("barraNavegacion");
+let barras2 = document.getElementById("barraNavegacion2");
 
 
 
@@ -85,4 +86,4 @@ navegacionDiv.appendChild(nav);
 
 // Agregar elementos al cuerpo del documento
 barras.appendChild(logoDiv);
-barras.appendChild(navegacionDiv);
+barras2.appendChild(navegacionDiv);
