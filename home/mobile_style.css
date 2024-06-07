@@ -6,10 +6,7 @@
 		height: 100vh;
 		background-color: black;
 	}
-	
-    *{
-        width: 100vw;
-    }
+    
 	
 	.logo{
 		width: 100vw;
@@ -230,7 +227,87 @@
         display: none;
     }
 
-   
+    .informacion{
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-direction: column;
+		width: 100vw;
+		height: 60vh;
+		
+	}
+	a{
+		text-decoration: none;
+		
+	}
+	
+	.tarjetaInformacion{
+		display: flex;
+		justify-content: center;
+		text-decoration: none;
+		align-items: center;
+		flex-direction: column;
+		color: white;
+		width: 85vw;
+		height: 15vh;
+		background-color: #ff8610;
+	}
+	
+	.informacionContacto{
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		width: 100vw;
+		height: 50vh;
+		background-color: black;
+		color: white;
+		margin-bottom: 10px;
+	}
+	
+	.informacionData h2{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-bottom: 2px solid white;
+		padding-bottom: 15px;
+		padding-top: 15px;
+		font-size: 35px;
+		width: 50%;
+		color: white;
+	}
+	
+	.informacionData{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		width: 45vw;
+		height: 30vh;
+	}
+	
+	.informacionData img{
+		width: 15vw;
+	}
+	
+	.instagram{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		width: 3.6vw;
+	}
+	
+	.informacionRedes{
+		display: flex;
+		justify-content: space-around;
+		flex-direction: column;
+		align-items: center;
+		width: 40vw;
+		height: 50vh;
+		background-color: black;
+		color: white;
+	}
+    
 	
 
 }
