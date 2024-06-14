@@ -1,4 +1,3 @@
-
 let barras = document.getElementById("barraNavegacion");
 let barras2 = document.getElementById("barraNavegacion2");
 
@@ -102,25 +101,37 @@ items.forEach(item => {
     const li = document.createElement("li");
     const a = document.createElement("a");
     a.href = item.href;
-    a.textContent = item.text;
-    
 
     const span = document.createElement("span");
     span.classList.add("icon", "icon-up-dir");
+    a.appendChild(document.createTextNode(item.text)); // Insertar el texto del elemento
     a.appendChild(span);
     li.appendChild(a);
 
     if (item.subcategories) {
-        const subUl = document.createElement("ul");
+        const divSubmenu = document.createElement("div");
+        divSubmenu.classList.add("submenu");
+        
+        const divSubmenuItems = document.createElement("div");
+        divSubmenuItems.classList.add("submenu-items");
+        
+        const pSubmenu = document.createElement("p");
+        pSubmenu.textContent = item.text;
+        divSubmenuItems.appendChild(pSubmenu);
+
+        const ulSubmenu = document.createElement("ul");
         item.subcategories.forEach(subItem => {
             const subLi = document.createElement("li");
             const subA = document.createElement("a");
             subA.href = subItem.href;
             subA.textContent = subItem.text;
             subLi.appendChild(subA);
-            subUl.appendChild(subLi);
+            ulSubmenu.appendChild(subLi);
         });
-        li.appendChild(subUl);
+
+        divSubmenuItems.appendChild(ulSubmenu);
+        divSubmenu.appendChild(divSubmenuItems);
+        li.appendChild(divSubmenu);
     }
 
     ul.appendChild(li);
@@ -134,5 +145,3 @@ navegacionDiv.appendChild(nav);
 
 barras.appendChild(logoDiv);
 barras2.appendChild(navegacionDiv);
-
-
