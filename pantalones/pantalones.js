@@ -6,13 +6,12 @@ let pantalones_tabla = [
 const url = "https://turkey-api-2k7c.vercel.app/api/turkey/get_productos?category_id=2";
 getData();
 async function getData(){
-  const response = await fetch(url,{
-    
-  });
+  const response = await fetch(url,{ });
   const data = await response.json();
   console.log(data);
   for (let i = 0; i < data.length; i++) {
-
+   
+ 
     let newProduct ={
         "product_name" : data[i].product_name,
         "product_title" : data[i].product_title,
@@ -23,9 +22,21 @@ async function getData(){
         "product_subcategory_id" : data[i].product_subcategory_id,
         "product_gender_id" : data[i].product_gender_id
     }
+   
     
         pantalones_tabla.push(newProduct);
         console.log(pantalones_tabla);
+        const other = await fetch("https://turkey-api-2k7c.vercel.app/api/turkey/get_material_name?product_material_id="+ pantalones_tabla[i].product_material_id,{
+    
+        });
+        const material = await other.json();
+        console.log(material);
+        let newMaterial ={
+          "material_id" : material[0].material_id,
+          "material_type" : material[0].material_type,
+         
+      }
+        pantalones_tabla[i].product_material_id = newMaterial.material_type;
 
     
     
