@@ -1,7 +1,7 @@
 let mujerHtml = document.getElementById("ropa");
 let mujer_tabla = [
-  ["mujer","$5","descripcion","/images/remera.png","Jean"],
-  ["mujer","$5","descripcion","/images/remera.png","Jean"],
+  ["mujer","$10","descripcion","/images/remera.png","Jean"],
+  ["Maia pelotuda","$5","descripcion","/images/remera.png","Jean"],
   ["mujer","$5","descripcion","/images/remera.png","Jean"],
   ["mujer","$5","descripcion","/images/remera.png","Jean"],
   ["mujer","$5","descripcion","/images/remera.png","Jean"],
