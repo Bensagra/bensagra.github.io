@@ -3,7 +3,7 @@ let camisas_tabla = [
  
 ];
 
-const url = "https://turkey-api-2k7c.vercel.app/api/turkey/get_productos?category_id=1";
+const url = "https://turkey-api-x7lv.vercel.app/api/turkey/get_productos?category_id=1";
 getData();
 async function getData(){
   const response = await fetch(url,{ });
@@ -26,7 +26,7 @@ async function getData(){
     
         camisas_tabla.push(newProduct);
         console.log(camisas_tabla);
-        const other = await fetch("https://turkey-api-2k7c.vercel.app/api/turkey/get_material_name?product_material_id="+ camisas_tabla[i].product_material_id,{
+        const other = await fetch("https://turkey-api-x7lv.vercel.app/api/turkey/get_material_name?product_material_id="+ camisas_tabla[i].product_material_id,{
     
         });
         const material = await other.json();
