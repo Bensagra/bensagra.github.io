@@ -398,7 +398,7 @@
 		animation-fill-mode: both;
 	}
 
-	.fila1{
+	.ropa{
 		view-timeline-name: --image;
 		view-timeline-axis: block;
 		animation-timeline: --image;
