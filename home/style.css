@@ -405,6 +405,12 @@
 		animation-name: show;
 		animation-range: entry 25% cover 40%;
 		animation-fill-mode: both;
+
+	}
+
+	.ropa:hover{
+		transform: scale(1.1);
+		transition: 0.5s;
 	}
 
 	.img{
