@@ -58,24 +58,24 @@ const items = [
         href: "/camisas/camisas.html", 
         text: "CAMISAS",
         subcategories: [
-            { href: "/camisas/formal.html", text: "Formal" },
-            { href: "/camisas/casual.html", text: "Casual" }
+            { href: "/camisas/camisas.html", text: "Formal" },
+            { href: "/camisas/camisas.html", text: "Casual" }
         ]
     },
     { 
         href: "/sastreria/sastreria.html", 
         text: "SASTRERIA",
         subcategories: [
-            { href: "/sastreria/traje.html", text: "Trajes" },
-            { href: "/sastreria/blazer.html", text: "Blazers" }
+            { href: "/sastreria/sastreria.html", text: "Trajes" },
+            { href: "/sastreria/sastreria.html", text: "Blazers" }
         ]
     },
     { 
         href: "/pantalones/pantalones.html", 
         text: "PANTALONES",
         subcategories: [
-            { href: "/pantalones/jeans.html", text: "Jeans" },
-            { href: "/pantalones/vestir.html", text: "Vestir" }
+            { href: "/pantalones/pantalones.html", text: "Jeans" },
+            { href: "/pantalones/pantalones.html", text: "Vestir" }
         ]
     },
     { 
@@ -95,11 +95,18 @@ const items = [
         text: "CONTACTO" 
     }
 ];
+item_selected = "";
+
+
+ 
+
 
 // Crear elementos de la lista y añadirlos al DOM
 items.forEach(item => {
+    
     const li = document.createElement("li");
     const a = document.createElement("a");
+    li.addEventListener("click", () => {item_selected = item.text});
     a.href = item.href;
 
     const span = document.createElement("span");

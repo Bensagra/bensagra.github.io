@@ -8,7 +8,6 @@ getData();
 async function getData(){
   const response = await fetch(url,{ });
   const data = await response.json();
-  console.log(data);
   for (let i = 0; i < data.length; i++) {
    
  
@@ -23,14 +22,11 @@ async function getData(){
         "product_gender_id" : data[i].product_gender_id
     }
    
-    
         camisas_tabla.push(newProduct);
-        console.log(camisas_tabla);
         const other = await fetch("https://turkey-api-x7lv.vercel.app/api/turkey/get_material_name?product_material_id="+ camisas_tabla[i].product_material_id,{
     
         });
         const material = await other.json();
-        console.log(material);
         let newMaterial ={
           "material_id" : material[0].material_id,
           "material_type" : material[0].material_type,

@@ -68,4 +68,3 @@ let newProduct ={
     
 }
 
-console.log(productos);
