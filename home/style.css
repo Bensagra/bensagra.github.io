@@ -155,7 +155,7 @@
 	}
 	
 	.navegacion nav ul li .submenu{
-		background: #fff;
+		background: #ff8610;
 		padding: 10px;
 		position: absolute;
 		display: none;
@@ -199,7 +199,7 @@
 	}
 	
 	.navegacion nav ul li .submenu .submenu-items a{
-		color: black;
+		color: #fff;
 		text-decoration: none;
 		font-weight: bold;
 		margin: 6px 0;

@@ -54,41 +54,44 @@ const items = [
         href: "/home/index.html", 
         text: "INICIO" 
     },
-    { 
-        href: "/camisas/camisas.html", 
-        text: "CAMISAS",
-        subcategories: [
-            { href: "/camisas/camisas.html", text: "Formal" },
-            { href: "/camisas/camisas.html", text: "Casual" }
+    {
+        href: "/hombre/hombre.html",
+        text: "HOMBRE",
+        subcategories:[
+        {
+            href: "/hombre/camisas.html",
+            text: "CAMISAS"
+        },
+        {
+            href: "/hombre/pantalones.html",
+            text: "PANTALONES"
+        },
+        {
+            href: "/hombre/sastreria.html",
+            text: "SASTRERIA"
+        },
+        {
+            href: "/hombre/calzado.html",
+            text: "CALZADO"
+        },
+        {
+            href: "/abrigos.html",
+            text: "ABRIGOS"
+        }
         ]
     },
-    { 
-        href: "/sastreria/sastreria.html", 
-        text: "SASTRERIA",
-        subcategories: [
-            { href: "/sastreria/sastreria.html", text: "Trajes" },
-            { href: "/sastreria/sastreria.html", text: "Blazers" }
-        ]
-    },
-    { 
-        href: "/pantalones/pantalones.html", 
-        text: "PANTALONES",
-        subcategories: [
-            { href: "/pantalones/pantalones.html", text: "Jeans" },
-            { href: "/pantalones/pantalones.html", text: "Vestir" }
-        ]
-    },
-    { 
-        href: "/hombre/hombre.html", 
-        text: "HOMBRE" 
-    },
+   
     { 
         href: "/mujer/mujer.html", 
         text: "MUJER" 
     },
+    {
+        href: "accesorios.html",
+        text: "ACCESORIOS"
+    },
     { 
         href: "/sobreNosotros.html", 
-        text: "SOBRE NOSOTROS" 
+        text: "QUIENES SOMOS" 
     },
     { 
         href: "/contacto/contacto.html", 
@@ -121,10 +124,7 @@ items.forEach(item => {
         
         const divSubmenuItems = document.createElement("div");
         divSubmenuItems.classList.add("submenu-items");
-        
-        const pSubmenu = document.createElement("p");
-        pSubmenu.textContent = item.text;
-        divSubmenuItems.appendChild(pSubmenu);
+      
 
         const ulSubmenu = document.createElement("ul");
         item.subcategories.forEach(subItem => {
