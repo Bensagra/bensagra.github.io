@@ -1,12 +1,44 @@
 let hombreHtml = document.getElementById("ropa");
-let hombre_tabla = [
-  ["hombre","$5","descripcion","/images/remera.png","Jean"],
-  ["hombre","$5","descripcion","/images/remera.png","Jean"],
-  ["hombre","$5","descripcion","/images/remera.png","Jean"],
-  ["hombre","$5","descripcion","/images/remera.png","Jean"],
-  ["hombre","$5","descripcion","/images/remera.png","Jean"],
-  ["hombre","$5","descripcion","/images/remera.png","Jean"],
-];
+let hombre_tabla = [];
+
+async function getData(){
+  const url = "https://turkey-api-x7lv.vercel.app/api/turkey/gender?product_gender_id=1";
+  const response = await fetch(url,{ });
+  const data = await response.json();
+  console.log(data)
+  for (let i = 0; i < data.length; i++) {
+   
+ 
+    let newProduct ={
+        "product_name" : data[i].product_name,
+        "product_title" : data[i].product_title,
+        "product_description" : data[i].product_description,
+        "product_material_id" : data[i].product_material_id,
+        "product_photo_url" : data[i].product_photo_url,
+        "product_price" : data[i].product_price,
+        "product_subcategory_id" : data[i].product_subcategory_id,
+        "product_gender_id" : data[i].product_gender_id
+    }
+   
+        camisas_tabla.push(newProduct);
+        const other = await fetch("https://turkey-api-x7lv.vercel.app/api/turkey/get_material_name?product_material_id="+ camisas_tabla[i].product_material_id,{
+    
+        });
+        const material = await other.json();
+        let newMaterial ={
+          "material_id" : material[0].material_id,
+          "material_type" : material[0].material_type,
+         
+      }
+        camisas_tabla[i].product_material_id = newMaterial.material_type;
+
+    
+    
+    
+        
+    }
+  cargarCamisas();
+}
 
 function cargarhombre(){
   let div = document.createElement('div');
