@@ -8,6 +8,7 @@ getData();
 async function getData(){
   const response = await fetch(url,{ });
   const data = await response.json();
+  console.log(data)
   for (let i = 0; i < data.length; i++) {
    
  

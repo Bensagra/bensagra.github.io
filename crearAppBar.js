@@ -59,23 +59,23 @@ const items = [
         text: "HOMBRE",
         subcategories:[
         {
-            href: "/hombre/camisas.html",
+            href: "../camisas/camisas.html",
             text: "CAMISAS"
         },
         {
-            href: "/hombre/pantalones.html",
+            href: "../pantalones/pantalones.html",
             text: "PANTALONES"
         },
         {
-            href: "/hombre/sastreria.html",
+            href: "../sastreria/sastreria.html",
             text: "SASTRERIA"
         },
         {
-            href: "/hombre/calzado.html",
+            href: "../calzado/calzado.html",
             text: "CALZADO"
         },
         {
-            href: "/abrigos.html",
+            href: "../abrigos/abrigos.html",
             text: "ABRIGOS"
         }
         ]
