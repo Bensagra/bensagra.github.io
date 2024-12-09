@@ -11,9 +11,9 @@
 .slider-frame ul {
 	display: flex;
 	padding: 0;
-	width: 400%;
+	width: 800%;
 	background-color: black;
-	animation: slide 12s infinite alternate ease-in-out;
+	animation: slide 35s infinite alternate ease-in-out;
 }
 
 .slider-frame li {
@@ -26,15 +26,30 @@
 }
 
 @keyframes slide {
-	0% {margin-left: 0;}
-	20% {margin-left: 0;}
+	0% { margin-left: 0; }          /* Primera imagen */
+	6.25% { margin-left: 0; }       /* Mantener primera imagen */
 	
-	25% {margin-left: -100%;}
-	45% {margin-left: -100%;}
+	12.5% { margin-left: -100%; }   /* Segunda imagen */
+	18.75% { margin-left: -100%; }  /* Mantener segunda imagen */
 	
-	50% {margin-left: -200%;}
-	70% {margin-left: -200%;}
+	25% { margin-left: -200%; }     /* Tercera imagen */
+	31.25% { margin-left: -200%; }  /* Mantener tercera imagen */
 	
-	75% {margin-left: -300%;}
-	100% {margin-left: -300%;}
+	37.5% { margin-left: -300%; }   /* Cuarta imagen */
+	43.75% { margin-left: -300%; }  /* Mantener cuarta imagen */
+	
+	50% { margin-left: -400%; }     /* Quinta imagen */
+	56.25% { margin-left: -400%; }  /* Mantener quinta imagen */
+	
+	62.5% { margin-left: -500%; }   /* Sexta imagen */
+	68.75% { margin-left: -500%; }  /* Mantener sexta imagen */
+	
+	75% { margin-left: -600%; }     /* Séptima imagen */
+	81.25% { margin-left: -600%; }  /* Mantener séptima imagen */
+	
+	87.5% { margin-left: -700%; }   /* Octava imagen */
+	100% { margin-left: -700%; }  /* Mantener octava imagen */
+
+	
 }
+
