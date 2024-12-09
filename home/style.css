@@ -269,7 +269,7 @@
 	
 	.ropa-image{
 		width: 350px;
-		height: 360px;
+		height: 100%;
 		background-color: #f3f0eb;
 		display: flex;
 		justify-content: center;
@@ -279,8 +279,8 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 70%;
-		height: 70%;
+		width: 90%;
+		height: 90%;
 	
 	}
 	
@@ -409,7 +409,6 @@
 	}
 
 	.ropa:hover{
-		cursor: pointer;
 		transform: scale(1.1);
 		transition: 0.5s;
 	}
