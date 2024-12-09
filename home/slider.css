@@ -13,7 +13,7 @@
 	padding: 0;
 	width: 800%;
 	background-color: black;
-	animation: slide 35s infinite alternate ease-in-out;
+	animation: slide 40s infinite alternate ease-in-out;
 }
 
 .slider-frame li {
@@ -27,29 +27,30 @@
 
 @keyframes slide {
 	0% { margin-left: 0; }          /* Primera imagen */
-	6.25% { margin-left: 0; }       /* Mantener primera imagen */
+	10% { margin-left: 0; }         /* Mantener primera imagen */
 	
-	12.5% { margin-left: -100%; }   /* Segunda imagen */
-	18.75% { margin-left: -100%; }  /* Mantener segunda imagen */
+	12% { margin-left: -100%; }     /* Transición a segunda imagen */
+	22% { margin-left: -100%; }     /* Mantener segunda imagen */
 	
-	25% { margin-left: -200%; }     /* Tercera imagen */
-	31.25% { margin-left: -200%; }  /* Mantener tercera imagen */
+	24% { margin-left: -200%; }     /* Transición a tercera imagen */
+	34% { margin-left: -200%; }     /* Mantener tercera imagen */
 	
-	37.5% { margin-left: -300%; }   /* Cuarta imagen */
-	43.75% { margin-left: -300%; }  /* Mantener cuarta imagen */
+	36% { margin-left: -300%; }     /* Transición a cuarta imagen */
+	46% { margin-left: -300%; }     /* Mantener cuarta imagen */
 	
-	50% { margin-left: -400%; }     /* Quinta imagen */
-	56.25% { margin-left: -400%; }  /* Mantener quinta imagen */
+	48% { margin-left: -400%; }     /* Transición a quinta imagen */
+	58% { margin-left: -400%; }     /* Mantener quinta imagen */
 	
-	62.5% { margin-left: -500%; }   /* Sexta imagen */
-	68.75% { margin-left: -500%; }  /* Mantener sexta imagen */
+	60% { margin-left: -500%; }     /* Transición a sexta imagen */
+	70% { margin-left: -500%; }     /* Mantener sexta imagen */
 	
-	75% { margin-left: -600%; }     /* Séptima imagen */
-	81.25% { margin-left: -600%; }  /* Mantener séptima imagen */
+	72% { margin-left: -600%; }     /* Transición a séptima imagen */
+	82% { margin-left: -600%; }     /* Mantener séptima imagen */
 	
-	87.5% { margin-left: -700%; }   /* Octava imagen */
-	100% { margin-left: -700%; }  /* Mantener octava imagen */
+	84% { margin-left: -700%; }     /* Transición a octava imagen */
+	100% { margin-left: -700%; }     /* Mantener octava imagen */
 
-	
+	      /* Reinicio a la primera imagen */
 }
+
 
