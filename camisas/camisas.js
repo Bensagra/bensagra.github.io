@@ -4,7 +4,6 @@ let camisas_tabla = [
 ];
 
 const url = "https://turkey-api-x7lv.vercel.app/api/turkey/get_productos?category_id=1";
-getData();
 async function getData() {
   document.getElementById('loader').style.display = 'block';
   const response = await fetch(url, {});
@@ -67,4 +66,4 @@ function crearWidget(messi, i) {
   camisasHtml.appendChild(messi);
 }
 
-cargarCamisas();
+getData();

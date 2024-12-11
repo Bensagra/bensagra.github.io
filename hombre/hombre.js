@@ -1,10 +1,12 @@
-let hombreHtml = document.getElementById("ropa");
-let hombre_tabla = [];
+let camisasHtml = document.getElementById("ropa");
+let camisas_tabla = [
 
+];
+
+const url = "https://turkey-api-x7lv.vercel.app/api/turkey/gender?product_gender_id=1";
+getData();
 async function getData() {
   document.getElementById('loader').style.display = 'block';
-
-  const url = "https://turkey-api-x7lv.vercel.app/api/turkey/gender?product_gender_id=1";
   const response = await fetch(url, {});
   const data = await response.json();
   console.log(data)
@@ -40,11 +42,10 @@ async function getData() {
   document.getElementById('loader').style.display = 'none';
 
 }
-
-function cargarhombre() {
+function cargarCamisas() {
   let div = document.createElement('div');
   div.classList.add('fila1');
-  for (let i = 0; i < hombre_tabla.length; i++) {
+  for (let i = 0; i < camisas_tabla.length; i++) {
     crearWidget(div, i);
   }
 }
@@ -57,13 +58,13 @@ function crearWidget(messi, i) {
   divImagen.classList.add('ropa-image');
 
   let img = document.createElement('img');
-  img.src = hombre_tabla[i][3]; // URL de la imagen
+  img.src = camisas_tabla[i].product_photo_url;
   img.classList.add('imagen');
 
   divImagen.appendChild(img);
   div2.appendChild(divImagen);
   messi.appendChild(div2);
-  hombreHtml.appendChild(messi);
+  camisasHtml.appendChild(messi);
 }
 
-cargarhombre();
+cargarCamisas();
