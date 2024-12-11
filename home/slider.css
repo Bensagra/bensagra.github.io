@@ -1,5 +1,7 @@
+@media (min-width: 600px){
+
 .slider-frame {
-	width: 1000px;
+	width: 55%;
     height: auto;
 	margin:50px auto 0;
 	margin-top: 0px;
@@ -54,3 +56,66 @@
 }
 
 
+}
+
+@media (max-width: 600px){
+
+	.slider-frame {
+		width: 95%;
+		height: auto;
+		margin:50px auto 0;
+		margin-top: 0px;
+		overflow: hidden;
+		background-color: #121212;
+		
+	}
+	
+	.slider-frame ul {
+		display: flex;
+		padding: 0;
+		width: 800%;
+		background-color: black;
+		animation: slide 33s infinite alternate ease-in-out;
+	}
+	
+	.slider-frame li {
+		width: 100%;
+		list-style: none;
+	}
+	
+	.slider-frame img {
+		width: 100%;
+	}
+	
+	@keyframes slide {
+		0% { margin-left: 0; }          /* Primera imagen */
+		10% { margin-left: 0; }         /* Mantener primera imagen */
+		
+		12% { margin-left: -100%; }     /* Transición a segunda imagen */
+		22% { margin-left: -100%; }     /* Mantener segunda imagen */
+		
+		24% { margin-left: -200%; }     /* Transición a tercera imagen */
+		34% { margin-left: -200%; }     /* Mantener tercera imagen */
+		
+		36% { margin-left: -300%; }     /* Transición a cuarta imagen */
+		46% { margin-left: -300%; }     /* Mantener cuarta imagen */
+		
+		48% { margin-left: -400%; }     /* Transición a quinta imagen */
+		58% { margin-left: -400%; }     /* Mantener quinta imagen */
+		
+		60% { margin-left: -500%; }     /* Transición a sexta imagen */
+		72% { margin-left: -500%; }     /* Mantener sexta imagen */
+		
+		74% { margin-left: -600%; }     /* Transición a séptima imagen */
+		86% { margin-left: -600%; }     /* Mantener séptima imagen */
+		
+		88% { margin-left: -700%; }     /* Transición a octava imagen */
+		100% { margin-left: -700%; }     /* Mantener octava imagen */
+	
+			  /* Reinicio a la primera imagen */
+	}
+	
+	
+	}
+	
+	

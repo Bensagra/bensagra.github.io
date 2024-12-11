@@ -9,11 +9,11 @@
     
 	
 	.logo{
-		width: 100vw;
-		height: 40vh;
+		width: 95vw;
+		height: 25vh;
 		display: flex;
         justify-content: space-around;
-    
+    align-items: center;
 		background-color: black;
         
 		}
@@ -36,8 +36,9 @@
             align-items: center;
         }
     .logoImage{
-    width: 40vw;
-    height: 25vh;
+        
+    width: 25vw;
+    height: auto;
     }
         
 
