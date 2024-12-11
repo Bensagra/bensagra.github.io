@@ -16,7 +16,7 @@
     align-items: center;
 		background-color: black;
         border-bottom: 1px solid #ff8610   ;
-        
+        margin-bottom: 3vh;
 		}
 
         .botonMenu{
@@ -38,8 +38,8 @@
         }
     .logoImage{
         
-    width: 50vw;
-    height: auto;
+    width: auto;
+    height: 14.8vh;
     }
         
 
@@ -47,7 +47,6 @@
           display: flex;
           align-items: start;
             justify-content: start;
-          width: 50vw;
         }
         
 
@@ -146,7 +145,7 @@
             align-items: center;
             justify-content: space-around;
             width: 100vw;
-            font-size: 30px;
+            font-size: 7vw;
             margin-top: 40px;
             margin-bottom: 40px;
             text-align: center;
