@@ -134,8 +134,10 @@
             flex-direction: column;
             width: 100%;
             background-color:black ;
-            height: 850px;
+            height: 60vh;
           
+
+
             
         }
         .newCollectionTitle{
@@ -154,13 +156,13 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
-            flex-direction: column;
-            width: 100%;   
+            flex-direction: row;
+            width: 100vw;   
         }
         
         .newCollectionImage{
-            width: 350px;
-            height: 550px;
+            width: 40vw;
+            height: 30vh;
         
         }
         
@@ -169,13 +171,17 @@
             color: #f3f0eb;
             align-items: center;
             justify-content: center;
-            font-size: 35px; margin-bottom: 40px;
+            font-size: 35px; 
         }
         
         .img{
             align-self: flex-end;
         }
         
+        #map {
+            height: 100%;
+            width:100%;
+        }
 
         @keyframes show{
             from {
@@ -260,9 +266,10 @@
 		justify-content: space-around;
 		align-items: center;
 		width: 100vw;
-		height: 50vh;
+		height: 35vh;
 		background-color: #121212;
 		color: white;
+        background-color: black;
 		margin-bottom: 10px;
 	}
 	
@@ -271,10 +278,8 @@
 		justify-content: center;
 		align-items: center;
 		border-bottom: 2px solid white;
-		padding-bottom: 15px;
-		padding-top: 15px;
-		font-size: 35px;
-		width: 50%;
+		font-size: 0,005vw;
+		width: 100%;
 		color: white;
 	}
 	
@@ -283,34 +288,38 @@
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		width: 45vw;
-		height: 30vh;
+		width: 40vw;
+        background-color: black;
+		height: 35vh;
 	}
+
 	
 	.informacionData img{
-		width: 15vw;
+		width: 35vw;
+        height: auto;
 	}
-	
+	.botonera{
+        display: flex;
+        justify-content: space-around;
+    }
 	.instagram{
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		width: 3.6vw;
+        height: 15vw; width: 15vw;
 	}
 	
 	.informacionRedes{
 		display: flex;
 		justify-content: space-around;
-		flex-direction: column;
+		flex-direction: column-reverse;
 		align-items: center;
 		width: 40vw;
-		height: 50vh;
-		background-color: black;
+		height: 35vh;
 		color: white;
 	}
     
-	
 
 }
 
