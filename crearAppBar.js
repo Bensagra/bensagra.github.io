@@ -86,7 +86,7 @@ const items = [
         text: "MUJER" 
     },
     {
-        href: "accesorios.html",
+        href: "../accesorios/accesorios.html",
         text: "ACCESORIOS"
     },
     { 
