@@ -19,6 +19,7 @@ logoImage.src = "/images/images.png";
 logoImage.alt = "Logo";
 
 logoLink.appendChild(logoImage);
+
 logoDiv.appendChild(botonMenuDiv);
 logoDiv.appendChild(logoLink);
 
