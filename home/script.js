@@ -4,7 +4,9 @@ let body = document.getElementById("body");
 const menu = document.getElementById("menu");
 const navBarButtonClose = document.getElementById("navBarButtonClose");
 const navegacion = document.getElementById("navegacion");
-
+function desaparecer() {
+    location.href = "/home/index.html"
+}
 // Función para crear el menú dinámicamente
 function createMenu(menuData) {
     const ul = document.createElement("ul");
