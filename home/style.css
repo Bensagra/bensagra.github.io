@@ -388,7 +388,7 @@
 		height: 20vh;
 		display: flex; 
 		flex-direction: column;
-		justify-content: space-around;
+		justify-content: center;
 		font-size: 35px;
 	}
 	
@@ -475,7 +475,12 @@
 		height: 40vh;
 		background-color: #f6f5f1;
 	}
-	
+	.sobreNosotros{
+		height: 90vh;
+		
+		width: 30vw;
+		color: white;
+	}
 	.informacionContacto{
 		display: flex;
 		justify-content: space-around;
@@ -493,6 +498,7 @@
 		align-items: center;
 		border-bottom: 2px solid white;
 		padding-bottom: 30px;
+		font-weight: 100;
 		padding-top: 30px;
 		font-size: 35px;
 		width: 50%;
@@ -534,6 +540,11 @@
 	
 	#menu{
 		display: none;	
+	}
+
+	.textoSobreNosotros{
+		margin-top: 1vh;
+		width: 30vw;
 	}
 }
 
