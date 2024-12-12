@@ -124,18 +124,45 @@
 	}
 
 	
-	
+	/* Estilo para la flecha */
+.icon-down-dir {
+    display: inline-block;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Rotación de la flecha */
+.rotated {
+    transform: rotate(180deg);
+}
+
+/* Estilo inicial del submenú (oculto) */
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: white; /* Ajusta el color según tu diseño */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+}
+
+/* Mostrar el submenú cuando tenga la clase "open" */
+.submenu.open {
+    display: block;
+}
+
 	.navegacion nav ul{
 		list-style: none;
         background-color: black;
 		position: relative;
-        width: 100%;
+        width: 30vw;
 	}
-	.navegacion nav ul:hover{
-		background-color: #ff8610;
-	}
+	
 	.navegacion nav > ul > li{
-		display: inline-block;
+		display: flex;
+        justify-content: start;
+        align-items: center;
 		
 	
 	}
@@ -951,6 +978,72 @@
 body.menu-open {
     overflow: hidden;
 }
+
+/* Estilo base para la lista */
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    position: relative; /* Necesario para posicionar el submenú */
+}
+/* Estilo base para la lista */
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    position: relative; /* Necesario para posicionar el submenú */
+}
+
+/* Submenú inicialmente oculto */
+.submenu {
+    position: absolute; /* Hace que el submenú se superponga al contenido */
+    top: 100%; /* Ubica el submenú justo debajo del elemento padre */
+    left: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-height: 0; /* Ocultarlo completamente */
+    overflow: hidden; /* Asegurarse de que el contenido no sea visible */
+    opacity: 0; /* Hace que sea invisible */
+    transition: all 0.3s ease-in-out; /* Suavizar la transición */
+    z-index: 1000;
+}
+
+/* Al hacer hover sobre el elemento padre, mostrar el submenú */
+li:hover > .submenu,
+li:focus-within > .submenu {
+    max-height: 500px; /* Altura máxima para el contenido visible */
+    opacity: 1; /* Hacerlo visible */
+}
+
+/* Submenú interno: estilo de los elementos */
+.submenu ul {
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.submenu ul li {
+    padding: 5px 15px;
+}
+
+.submenu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.submenu ul li a:hover {
+    color: #007bff; /* Cambiar color al pasar por encima */
+}
+
+
 }
 
 

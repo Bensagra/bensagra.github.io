@@ -532,7 +532,9 @@
 		color: white;
 	}
 	
-	
+	#menu{
+		display: none;	
+	}
 }
 
 
