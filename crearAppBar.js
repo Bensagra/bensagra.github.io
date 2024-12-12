@@ -71,10 +71,7 @@ const items = [
                 href: "../sastreria/sastreria.html",
                 text: "SASTRERIA"
             },
-            {
-                href: "../calzado/calzado.html",
-                text: "CALZADO"
-            },
+
             {
                 href: "../abrigos/abrigos.html",
                 text: "ABRIGOS"
