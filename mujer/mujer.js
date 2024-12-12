@@ -7,6 +7,7 @@ const url = "https://turkey-api-2k7c.vercel.app/api/turkey/gender?product_gender
 getData();
 async function getData() {
   document.getElementById('loader').style.display = 'block';
+  document.getElementById("informacionContacto").style.display = "none";
 
   const response = await fetch(url, {});
   if (response.status !== 200) {
@@ -46,6 +47,8 @@ async function getData() {
   }
   cargarPantalones();
   document.getElementById('loader').style.display = 'none';
+  document.getElementById("informacionContacto").style.display = "flex";
+
 
 }
 

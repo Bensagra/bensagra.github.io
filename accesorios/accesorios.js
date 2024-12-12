@@ -6,6 +6,8 @@ let camisas_tabla = [
 const url = "https://turkey-api-x7lv.vercel.app/api/turkey/get_productos?category_id=17";
 async function getData() {
   document.getElementById('loader').style.display = 'block';
+  document.getElementById("informacionContacto").style.display = "none";
+
   const response = await fetch(url, {});
   const data = await response.json();
   console.log(data)
@@ -39,6 +41,8 @@ async function getData() {
   }
   cargarCamisas();
   document.getElementById('loader').style.display = 'none';
+  document.getElementById("informacionContacto").style.display = "flex";
+
 
 }
 function cargarCamisas() {
