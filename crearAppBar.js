@@ -7,7 +7,7 @@ logoDiv.classList.add("logo");
 const botonMenuDiv = document.createElement("div");
 botonMenuDiv.classList.add("botonMenu");
 botonMenuDiv.id = "navBarButton";
-botonMenuDiv.innerHTML = '<i class="bi bi-list"></i>';
+botonMenuDiv.innerHTML = '<i class="bi bi-list" id="menuButton"></i>';
 
 const logoLink = document.createElement("a");
 logoLink.href = "/home/index.html";
@@ -51,66 +51,66 @@ const ul = document.createElement("ul");
 
 // Lista de elementos de la navegación
 const items = [
-    { 
-        href: "/home/index.html", 
-        text: "INICIO" 
+    {
+        href: "/home/index.html",
+        text: "INICIO"
     },
     {
         href: "/hombre/hombre.html",
         text: "HOMBRE",
-        subcategories:[
-        {
-            href: "../camisas/camisas.html",
-            text: "CAMISAS"
-        },
-        {
-            href: "../pantalones/pantalones.html",
-            text: "PANTALONES"
-        },
-        {
-            href: "../sastreria/sastreria.html",
-            text: "SASTRERIA"
-        },
-        {
-            href: "../calzado/calzado.html",
-            text: "CALZADO"
-        },
-        {
-            href: "../abrigos/abrigos.html",
-            text: "ABRIGOS"
-        }
+        subcategories: [
+            {
+                href: "../camisas/camisas.html",
+                text: "CAMISAS"
+            },
+            {
+                href: "../pantalones/pantalones.html",
+                text: "PANTALONES"
+            },
+            {
+                href: "../sastreria/sastreria.html",
+                text: "SASTRERIA"
+            },
+            {
+                href: "../calzado/calzado.html",
+                text: "CALZADO"
+            },
+            {
+                href: "../abrigos/abrigos.html",
+                text: "ABRIGOS"
+            }
         ]
     },
-   
-    { 
-        href: "/mujer/mujer.html", 
-        text: "MUJER" 
+
+    {
+        href: "/mujer/mujer.html",
+        text: "MUJER"
     },
     {
         href: "../accesorios/accesorios.html",
         text: "ACCESORIOS"
     },
-    { 
-        href: "/sobreNosotros.html", 
-        text: "QUIENES SOMOS" 
+    {
+        href: "/sobreNosotros.html",
+        text: "QUIENES SOMOS"
     },
-    { 
-        href: "/contacto/contacto.html", 
-        text: "CONTACTO" 
+    {
+        href: "/contacto/contacto.html",
+        text: "CONTACTO"
     }
 ];
 item_selected = "";
 
 
- 
+
 
 
 // Crear elementos de la lista y añadirlos al DOM
 items.forEach(item => {
-    
+
     const li = document.createElement("li");
     const a = document.createElement("a");
-    li.addEventListener("click", () => {item_selected = item.text});
+    li.addEventListener("click", () => { item_selected = item.text });
     a.href = item.href;
 
     const span = document.createElement("span");
@@ -122,10 +122,10 @@ items.forEach(item => {
     if (item.subcategories) {
         const divSubmenu = document.createElement("div");
         divSubmenu.classList.add("submenu");
-        
+
         const divSubmenuItems = document.createElement("div");
         divSubmenuItems.classList.add("submenu-items");
-      
+
 
         const ulSubmenu = document.createElement("ul");
         item.subcategories.forEach(subItem => {
