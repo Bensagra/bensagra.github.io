@@ -43,9 +43,9 @@ imagenNavegacionMovil.alt = "ImagenLogo";
 const h1Nav = document.createElement("h1");
 h1Nav.id = "navBarButtonClose";
 h1Nav.innerHTML = '<i class="bi bi-x"></i>';
-
-navegacionMovilDiv.appendChild(imagenNavegacionMovil);
 navegacionMovilDiv.appendChild(h1Nav);
+navegacionMovilDiv.appendChild(imagenNavegacionMovil);
+
 
 const ul = document.createElement("ul");
 

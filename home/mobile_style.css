@@ -89,6 +89,10 @@
 	.navegacionMovil{
 		display: none;
 	}
+
+    #navBarButtonClose{
+        font-size: 5vw;
+    }
 	.botonesEnlaceItem {
 		view-timeline-name: --image;
 		view-timeline-axis: block;
@@ -665,6 +669,7 @@
     align-items: center;
     padding-left: 20px;
     padding-right: 10px;
+    width: 50vw;
 }
         
 		nav ul li a{
