@@ -1,98 +1,103 @@
-
-let menu_horizontal = document.getElementById('menu-horizontal');
 let video = document.getElementById('video');
-let camisas = document.getElementById("camisas");
-let sastreria = document.getElementById("sastreria");
-let pantalones = document.getElementById("pantalon");
-let sobreNosotros = document.getElementById("sobreNosotros");
-let contacto = document.getElementById("contacto");
-let hombre = document.getElementById("hombre");
-let mujer = document.getElementById("mujer");
-let navegacion = document.getElementById("navegacion");
-let navBarButton = document.getElementById("navBarButton");
-let navBarButtonClose = document.getElementById("navBarButtonClose");
 let body = document.getElementById("body");
 
-let ul_document = [
-camisas,sastreria,pantalones,hombre,mujer,sobreNosotros,contacto,
-]
+const menu = document.getElementById("menu");
+const navBarButtonClose = document.getElementById("navBarButtonClose");
+const navegacion = document.getElementById("navegacion");
 
+// Función para crear el menú dinámicamente
+function createMenu(menuData) {
+    const ul = document.createElement("ul");
 
-function desaparecer(){
-location.href = "/home/index.html"
-}
+    menuData.forEach(option => {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.textContent = option.name;
 
-navBarButton.addEventListener("click", visible);
-navBarButtonClose.addEventListener("click", close);
+        // Verificar si tiene subopciones
+        if (option.suboptions && option.suboptions.length > 0) {
+            const submenu = document.createElement("ul");
+            submenu.classList.add("submenu");
 
+            option.suboptions.forEach(suboption => {
+                const subLi = document.createElement("li");
+                const subA = document.createElement("a");
+                subA.textContent = suboption;
+                subA.href = `#`; // Add appropriate links
+                subLi.appendChild(subA);
+                submenu.appendChild(subLi);
+            });
 
-function visible (){
-    navegacion.classList.toggle("navegacion-visible");
-}
-function close (){
-    navegacion.classList.remove("navegacion-visible");
-}
+            li.appendChild(submenu);
 
-let tabla = [
-    //camisas
-    ["Camisas",],
-    //sastreria
-    ["Sastreria","Ambos", "Sacos", "Pantalon"],
-    //pantalones
-    ["Pantalones","Chino's", "Denim", "Bermudas", ],
-]
-//function comprobarAncho(){
-    //if (window.innerWidth < window.innerHeight) {
-    //    body.remove(document.getElementById("navegacion"));
-
-  //  }
-//}
-for (let i = 0; i < tabla.length; i++) {
-
-    for (let j = 1; j < tabla[i].length; j++) {
-        if (tabla[i][j] == tabla[0][j]) {
-            asignar(i,j,camisas);
-            
-        }else if (tabla[i][j] == tabla[1][j]) {
-           asignar(i,j ,sastreria);
-            }
-        else if (tabla[i][j] == tabla[2][j]) {
-           asignar(i,j ,pantalones);
-            }
-        else if (tabla[i][j] == tabla[3][j]) {
-           asignar(i,j ,denim);
-            }
-        
-        else if (tabla[i][j] == tabla[4][j]) {
-           asignar(i,j ,chinos);
-           }
-        else if (tabla[i][j] == tabla[5][j]) {
-           asignar(i,j ,hombre);
-            }
-            else if (tabla[i][j] == tabla[6][j]) {
-                asignar(i,j ,mujer);
-                 }
+            // Agregar evento para desplegar/ocultar submenú
+            a.addEventListener("click", (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                li.classList.toggle("open");
+            });
         }
-        
 
-       
-}
-armarLi("Sobre nosotros","menu-vertical");
-armarLi("contacto","menu-vertical");
+        li.appendChild(a);
+        ul.appendChild(li);
+    });
 
-function cambiarClase(){
-    navegacion.classList.remove("navigator");
-    navegacion.classList.add("navigator-stick");
+    menu.appendChild(ul);
 }
 
-function asignar(i,j, li){
+// Menú de datos
+const menuData = [
+    { name: "Inicio", href: "/home/index.html", suboptions: [] },
+    {
+        name: "Hombre",
+        href: "/hombre/hombre.html",
+        suboptions: [
+            "Camisas",
+            "Pantalones",
+            "Sastreria",
+            "Calzado",
+            "Abrigos"
+        ]
+    },
+    { name: "Mujer", href: "/mujer/mujer.html", suboptions: [] },
+    { name: "Accesorios", href: "../accesorios/accesorios.html", suboptions: [] },
+    { name: "Quienes somos", href: "/sobreNosotros.html", suboptions: [] },
+    { name: "Contacto", href: "/contacto/contacto.html", suboptions: [] }
+];
 
-    let element = document.createElement('li');
-            let a = document.createElement('a');
-            a.innerText = tabla[i][j];
-            element.appendChild(a);
-            li.appendChild(element);
+// Generar el menú dinámicamente
+createMenu(menuData);
+
+// Función para toglear menú
+function toggleMenu() {
+    navegacion.classList.toggle('navegacion-visible');
+    body.classList.toggle('menu-open');
 }
 
+// Evento para mostrar/ocultar el menú
+menuButton.addEventListener("click", (e) => {
+    e.stopPropagation();
+    toggleMenu();
+});
 
+// Evento para cerrar menú
+navBarButtonClose.addEventListener("click", (e) => {
+    e.stopPropagation();
+    toggleMenu();
+});
 
+// Ocultar el menú al hacer clic fuera de él
+document.addEventListener("click", (e) => {
+    if (!navegacion.contains(e.target) && !menuButton.contains(e.target)) {
+        navegacion.classList.remove('navegacion-visible');
+        body.classList.remove('menu-open');
+    }
+});
+
+// Cerrar menú cuando se selecciona un elemento
+menu.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A') {
+        navegacion.classList.remove('navegacion-visible');
+        body.classList.remove('menu-open');
+    }
+});
