@@ -479,7 +479,9 @@
 	}
 
 
-
+	.sobreNosotrosMas{
+		font-weight: 150; color: #ff8610;
+	}
 	.divSobreNosotros{
 		display: flex;
 		justify-content: space-around;
@@ -502,8 +504,12 @@
 		color: white;
 		margin-bottom: 1vh;
 }
+.imagenMaestria{
+	width: 35vw; height: auto;
+	}
 
 	.sobreNosotros{
+font-weight: 200; text-align: justify;
 		margin-left: 8vw;
 		height: auto;
 		display: flex;
