@@ -1,0 +1,105 @@
+@media (min-width: 1350px){
+
+    .slider-frame {
+        width: 55%;
+        height: auto;
+        margin:50px auto 0;
+        margin-top: 0px;
+        overflow: hidden;
+        background-color: #121212;
+        
+    }
+    
+    .slider-frame ul {
+        display: flex;
+        padding: 0;
+        width: 600%;
+        background-color: black;
+        animation: slide 18s infinite alternate ease-in-out;
+    }
+    
+    .slider-frame li {
+        width: 100%;
+        list-style: none;
+    }
+    
+    .slider-frame img {
+        width: 100%;
+    }
+    
+    @keyframes slide {
+        0% { margin-left: 0; }            /* Primera imagen */
+        16% { margin-left: 0; }           /* Mantener primera imagen */
+    
+        18% { margin-left: -100%; }       /* Transición a segunda imagen */
+        33% { margin-left: -100%; }       /* Mantener segunda imagen */
+    
+        35% { margin-left: -200%; }       /* Transición a tercera imagen */
+        50% { margin-left: -200%; }       /* Mantener tercera imagen */
+    
+        52% { margin-left: -300%; }       /* Transición a cuarta imagen */
+        67% { margin-left: -300%; }       /* Mantener cuarta imagen */
+    
+        69% { margin-left: -400%; }       /* Transición a quinta imagen */
+        84% { margin-left: -400%; }       /* Mantener quinta imagen */
+    
+        86% { margin-left: -500%; }       /* Transición a sexta imagen */
+        100% { margin-left: -500%; } 
+              /* Reinicio a la primera imagen */
+    }
+    
+    
+    }
+    
+    @media (max-width: 1350px){
+    
+        .slider-frame {
+            width: 95vw;
+            height: auto;
+            margin:50px auto 0;
+            margin-top: 0px;
+            overflow: hidden;
+            background-color: #121212;
+            
+        }
+        
+        .slider-frame ul {
+            display: flex;
+            padding: 0;
+            width: 600%;
+            background-color: black;
+            animation: slide 18s infinite alternate ease-in-out;
+        }
+        
+        .slider-frame li {
+            width: 100%;
+            list-style: none;
+        }
+        
+        .slider-frame img {
+            width: 100%;
+        }
+        
+        @keyframes slide {    0% { margin-left: 0; }            /* Primera imagen */
+        16% { margin-left: 0; }           /* Mantener primera imagen */
+    
+        18% { margin-left: -100%; }       /* Transición a segunda imagen */
+        33% { margin-left: -100%; }       /* Mantener segunda imagen */
+    
+        35% { margin-left: -200%; }       /* Transición a tercera imagen */
+        50% { margin-left: -200%; }       /* Mantener tercera imagen */
+    
+        52% { margin-left: -300%; }       /* Transición a cuarta imagen */
+        67% { margin-left: -300%; }       /* Mantener cuarta imagen */
+    
+        69% { margin-left: -400%; }       /* Transición a quinta imagen */
+        84% { margin-left: -400%; }       /* Mantener quinta imagen */
+    
+        86% { margin-left: -500%; }       /* Transición a sexta imagen */
+        100% { margin-left: -500%; } 
+        }
+        
+        
+        }
+        
+        

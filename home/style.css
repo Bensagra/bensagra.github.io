@@ -475,6 +475,18 @@
 		height: 40vh;
 		background-color: #f6f5f1;
 	}
+
+
+
+	.divSobreNosotros{
+		display: flex;
+		justify-content: space-around;
+		flex-direction: row;
+		width: 100vw;
+		height: 80vh;
+		background-color: black;
+		color: white;
+	}
 	.sobreNosotros{
 		height: 90vh;
 		
