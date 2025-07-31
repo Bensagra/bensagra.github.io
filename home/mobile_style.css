@@ -1657,4 +1657,38 @@ li:focus-within > .submenu {
     border-radius: 999px;
     align-self: center;
   }
+
+  .menu-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  background: #0f0f0f;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
 }
+
+.back-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.menu-title {
+  flex: 1;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+}
+
+
+/* Header dentro del menú con back y título */
