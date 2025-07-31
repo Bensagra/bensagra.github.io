@@ -6,32 +6,32 @@ let camisas_tabla = [
 function cargarCamisas() {
   let elemento = [
     {
-      name: "camisas",
+      name: "Camisas",
       quantity: 21
     },
     {
-      name: "pantalones",
+      name: "Pantalones",
       quantity: 17
     },
     {
-      name: "accesorios",
+      name: "Accesorios",
       quantity: 26
     },
      {
-      name: "abrigos",
+      name: "Abrigos",
       quantity: 12,
     },
     
     {
-      name: "denim",
+      name: "Denim",
       quantity: 15
     },
     {
-      name: "medida",
+      name: "Medida",
       quantity: 18
     },
     {
-      name: "sastreria",
+      name: "Sastreria",
       quantity: 21
     }
 
