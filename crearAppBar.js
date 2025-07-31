@@ -74,7 +74,11 @@ const items = [
 
             {
                 href: "../abrigos/abrigos.html",
-                text: "ABRIGOS"
+                text: "SWEATERS"
+            },
+            {
+                text: "DENIM",
+                href: "../denim/denim.html"
             }
         ]
     },
@@ -86,6 +90,10 @@ const items = [
     {
         href: "../accesorios/accesorios.html",
         text: "ACCESORIOS"
+    },
+    {
+        text: "PERSONALIZADOS",
+        href: "../medida/medida.html"
     },
     {
         href: "/sobreNosotros.html",

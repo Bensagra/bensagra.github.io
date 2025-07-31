@@ -3,61 +3,10 @@ let pantalones_tabla = [
 
 ];
 
-const url = "https://turkey-api-2k7c.vercel.app/api/turkey/get_productos?category_id=2";
-getData();
-async function getData() {
-  document.getElementById('loader').style.display = 'block';
-  document.getElementById("informacionContacto").style.display = "none";
-
-
-  const response = await fetch(url, {});
-  if (response.status !== 200) {
-    console.error(`Error: ${response.status}`);
-    return;
-
-  }
-  const data = await response.json();
-  for (let i = 0; i < data.length; i++) {
-
-
-    let newProduct = {
-      "product_name": data[i].product_name,
-      "product_title": data[i].product_title,
-      "product_description": data[i].product_description,
-      "product_material_id": data[i].product_material_id,
-      "product_photo_url": data[i].product_photo_url,
-      "product_price": data[i].product_price,
-      "product_subcategory_id": data[i].product_subcategory_id,
-      "product_gender_id": data[i].product_gender_id
-    }
-
-
-    pantalones_tabla.push(newProduct);
-
-    let newMaterial = {
-      "material_id": "",
-      "material_type": "",
-
-    }
-    pantalones_tabla[i].product_material_id = newMaterial.material_type;
-
-
-
-
-
-  }
-  cargarPantalones();
-  document.getElementById('loader').style.display = 'none';
-  document.getElementById("informacionContacto").style.display = "flex";
-
-
-}
-
-
-function cargarPantalones() {
+function cargarCamisas() {
   let div = document.createElement('div');
   div.classList.add('fila1');
-  for (let i = 0; i < pantalones_tabla.length; i++) {
+  for (let i = 1; i < 13; i++) {
     crearWidget(div, i);
   }
 }
@@ -70,7 +19,7 @@ function crearWidget(messi, i) {
   divImagen.classList.add('ropa-image');
 
   let img = document.createElement('img');
-  img.src = pantalones_tabla[i].product_photo_url;
+  img.src = `../images/ropa/Pantalones${i}.png`;
   img.classList.add('imagen');
 
   divImagen.appendChild(img);
@@ -78,5 +27,9 @@ function crearWidget(messi, i) {
   messi.appendChild(div2);
   pantalonesHtml.appendChild(messi);
 }
+let loader = document.getElementById("loader");
+if (loader) {
+  loader.style.display = "none";
+}
 
-cargarPantalones();
+cargarCamisas();

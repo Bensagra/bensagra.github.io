@@ -583,10 +583,12 @@ font-weight: 200; text-align: justify;
 		display: none;	
 	}
 
-	.textoSobreNosotros{
-		margin-top: 1vh;
-		width: 30vw;
-	}
+.textoSobreNosotros {
+  margin-top: 1vh;
+  font-size: 2vw;
+  font-weight: normal; 
+  width: 30vw;
+}
 }
 
 

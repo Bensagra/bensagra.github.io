@@ -3,58 +3,48 @@ let camisas_tabla = [
 
 ];
 
-const url = "https://turkey-api-x7lv.vercel.app/api/turkey/gender?product_gender_id=1";
-getData();
-async function getData() {
-  document.getElementById('loader').style.display = 'block';
-  document.getElementById("informacionContacto").style.display = "none";
-
-  const response = await fetch(url, {});
-  const data = await response.json();
-  console.log(data)
-  for (let i = 0; i < data.length; i++) {
-
-
-    let newProduct = {
-      "product_name": data[i].product_name,
-      "product_title": data[i].product_title,
-      "product_description": data[i].product_description,
-      "product_material_id": data[i].product_material_id,
-      "product_photo_url": data[i].product_photo_url,
-      "product_price": data[i].product_price,
-      "product_subcategory_id": data[i].product_subcategory_id,
-      "product_gender_id": data[i].product_gender_id
-    }
-
-    camisas_tabla.push(newProduct);
-
-    let newMaterial = {
-      "material_id": "",
-      "material_type": "",
-
-    }
-    camisas_tabla[i].product_material_id = newMaterial.material_type;
-
-
-
-
-
-  }
-  cargarCamisas();
-  document.getElementById('loader').style.display = 'none';
-  document.getElementById("informacionContacto").style.display = "flex";
-
-
-}
 function cargarCamisas() {
+  let elemento = [
+    {
+      name: "camisas",
+      quantity: 21
+    },
+    {
+      name: "pantalones",
+      quantity: 17
+    },
+    {
+      name: "accesorios",
+      quantity: 26
+    },
+     {
+      name: "abrigos",
+      quantity: 12,
+    },
+    
+    {
+      name: "denim",
+      quantity: 15
+    },
+    {
+      name: "medida",
+      quantity: 18
+    },
+    {
+      name: "sastreria",
+      quantity: 21
+    }
+
+  ]
   let div = document.createElement('div');
   div.classList.add('fila1');
-  for (let i = 0; i < camisas_tabla.length; i++) {
-    crearWidget(div, i);
-  }
+  for (let l = 0; l < elemento.length; l++) {
+    for (let i = 1; i < elemento[l].quantity; i++) {
+    crearWidget(div, elemento[l].name, i);
+  }}
 }
 
-function crearWidget(messi, i) {
+function crearWidget(messi,elemento, i) {
   let div2 = document.createElement('div');
   div2.classList.add('ropa');
 
@@ -62,7 +52,7 @@ function crearWidget(messi, i) {
   divImagen.classList.add('ropa-image');
 
   let img = document.createElement('img');
-  img.src = camisas_tabla[i].product_photo_url;
+  img.src = `../images/ropa/${elemento}${i}.png`;
   img.classList.add('imagen');
 
   divImagen.appendChild(img);
@@ -71,4 +61,9 @@ function crearWidget(messi, i) {
   camisasHtml.appendChild(messi);
 }
 
+
 cargarCamisas();
+let loader = document.getElementById("loader");
+if (loader) {
+  loader.style.display = "none";
+} 
