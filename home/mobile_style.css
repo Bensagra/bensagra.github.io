@@ -1075,3 +1075,520 @@ li:focus-within > .submenu {
 
 
 
+:root {
+  --bg: #000;
+  --accent: #ff8610;
+  --text: #fff;
+  --radius: 0.5rem;
+  --transition: 0.3s ease-in-out;
+  --font-stack: 'Times New Roman', Times, serif;
+}
+
+/* Mobile-first: para pantallas de hasta 900px */
+@media (max-width: 900px) {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    width: 100%;
+    min-height: 100%;
+    font-family: var(--font-stack);
+    overflow-x: hidden;
+  }
+
+  /* Loader centrado */
+  .loader {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--accent);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    z-index: 2000;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Variables de tamaño responsivo */
+  h1, h2 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+  }
+  p, a, li {
+    font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+  }
+
+  /* Logo y botonera */
+  .logo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg);
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--accent);
+    gap: 0.5rem;
+  }
+
+  .logoImage {
+    height: 3.5rem;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .botonera {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-weight: bold;
+    font-family: var(--font-stack);
+  }
+
+  .botonMenu,
+  .botonMenuAbierto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+
+  .botonMenu {
+    font-size: 2.5rem;
+    height: auto;
+    width: auto;
+  }
+
+  .botonMenuAbierto {
+    font-size: 1.25rem;
+  }
+
+  /* Navegación lateral */
+  .navegacion {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 70%;
+    max-width: 320px;
+    height: 100vh;
+    background-color: var(--bg);
+    padding: 1rem;
+    transition: left var(--transition);
+    z-index: 1500;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow-y: auto;
+  }
+
+  .navegacion-visible {
+    left: 0;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-left: 0;
+    width: 100%;
+    background: none;
+  }
+
+  nav ul li {
+    position: relative;
+  }
+
+  nav ul li a {
+    color: var(--text);
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    border-radius: var(--radius);
+    transition: background var(--transition);
+  }
+
+  nav ul li a:hover,
+  nav ul li a:focus-visible {
+    background: rgba(255, 255, 255, 0.1);
+    outline: none;
+  }
+
+  /* Submenú con transición suave */
+  .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease-in-out;
+    width: 100%;
+    z-index: 1000;
+    border-radius: 8px;
+  }
+
+  nav ul li:hover > .submenu,
+  nav ul li:focus-within > .submenu {
+    max-height: 1000px; /* suficientemente grande para mostrar contenido */
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .submenu ul {
+    list-style: none;
+    padding: 0.75rem 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .submenu ul li {
+    padding: 0;
+  }
+
+  .submenu ul li a {
+    padding: 0.5rem 1rem;
+    color: #333;
+    display: block;
+    font-size: 0.9rem;
+  }
+
+  .submenu ul li a:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: #007bff;
+  }
+
+  /* Icono de flecha */
+  .icon-down-dir {
+    display: inline-block;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .rotated {
+    transform: rotate(180deg);
+  }
+
+  /* Slider */
+  .slider-frame {
+    width: 100%;
+    overflow: hidden;
+    margin: 1rem auto;
+    background-color: #121212;
+    border-radius: var(--radius);
+    position: relative;
+  }
+
+  .slider-frame ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 300%;
+    animation: slide 12s infinite alternate ease-in-out;
+    list-style: none;
+  }
+
+  .slider-frame li {
+    flex: 0 0 100%;
+    list-style: none;
+  }
+
+  .slider-frame img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: var(--radius);
+  }
+
+  @keyframes slide {
+    0% { margin-left: 0; }
+    25% { margin-left: -100%; }
+    50% { margin-left: -200%; }
+    75% { margin-left: -100%; }
+    100% { margin-left: 0; }
+  }
+
+  /* Cards / tarjetas */
+  .tarjetaInformacion {
+    background-color: var(--accent);
+    color: var(--text);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    gap: 0.5rem;
+    min-height: 80px;
+    font-weight: 600;
+    transition: transform var(--transition);
+  }
+
+  .tarjetaInformacion:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Secciones de información */
+  .informacion {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .informacionContacto {
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .informacionData {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    background: transparent;
+  }
+
+  .informacionData h2 {
+    font-size: clamp(1.25rem, 5vw, 1.8rem);
+    border-bottom: 2px solid var(--text);
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    color: var(--text);
+  }
+
+  .informacionData img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 6px;
+  }
+
+  .instagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12vw;
+    height: 12vw;
+    min-width: 60px;
+    min-height: 60px;
+  }
+
+  .informacionRedes {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  /* New Collection */
+  .newCollection {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--bg);
+    padding: 1rem 0;
+    align-items: center;
+  }
+
+  .newCollectionTitle {
+    color: #f3f0eb;
+    font-size: clamp(1.5rem, 8vw, 3rem);
+    text-align: center;
+    width: 100%;
+    margin: 0;
+  }
+
+  .newCollectionImages {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .newCollectionImage {
+    flex: 1 1 40%;
+    min-height: 120px;
+    background-color: #1f1f1f;
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .newCollectionText {
+    color: #f3f0eb;
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    text-align: center;
+  }
+
+  /* Ropa / tarjetas de producto */
+  .ropa {
+    background-color: #fff;
+    border-radius: var(--radius);
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 360px;
+    margin: 0.5rem auto;
+    transition: transform 0.5s ease;
+  }
+
+  .ropa:hover {
+    transform: scale(1.03);
+  }
+
+  .ropa-image {
+    background-color: #f3f0eb;
+    width: 100%;
+    aspect-ratio: 4/5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+  }
+
+  .imagen {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ropa-texto {
+    background-color: #f6f5f1;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border-radius: 6px;
+  }
+
+  .tela {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--accent);
+  }
+
+  .ropa-title {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  /* Misc */
+  .menuGeneral,
+  .menuGeneral {
+    display: none;
+  }
+
+  .menu-hamburguesa {
+    position: relative;
+    width: 40px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    gap: 3px;
+  }
+
+  .menu-hamburguesa span {
+    display: block;
+    height: 4px;
+    border-radius: 3px;
+    background: var(--text);
+    transition: all var(--transition);
+  }
+
+  .menu-lateral {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #f4f4f4;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    transition: left var(--transition);
+    overflow-y: auto;
+    z-index: 1200;
+  }
+
+  .menu-lateral.active {
+    left: 0;
+  }
+
+  .menu-lateral ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .menu-lateral li {
+    font-size: 0.9rem;
+  }
+
+  .submenu.active {
+    display: block;
+  }
+
+  /* Footer / sección adicional */
+  .index {
+    background: var(--bg);
+    width: 100%;
+  }
+
+  /* Animaciones reducidas si se prefiere menos movimiento */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+}
