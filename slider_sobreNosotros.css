@@ -1,105 +1,149 @@
-@media (min-width: 1350px){
+@media (min-width: 1350px) {
+  .divSobreNosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 2rem;
+    background-color: black;
+    color: white;
+    gap: 2rem;
+    text-align: center;
+  }
 
-    .slider-frame {
-        width: 55%;
-        height: auto;
-        margin:50px auto 0;
-        margin-top: 0px;
-        overflow: hidden;
-        background-color: black;
-        
-    }
-    
-    .slider-frame ul {
-        display: flex;
-        padding: 0;
-        width: 600%;
-        background-color: black;
-        animation: slide 18s infinite alternate ease-in-out;
-    }
-    
-    .slider-frame li {
-        width: 100%;
-        list-style: none;
-    }
-    
-    .slider-frame img {
-        width: 100%;
-    }
-    
-    @keyframes slide {
-        0% { margin-left: 0; }            /* Primera imagen */
-        16% { margin-left: 0; }           /* Mantener primera imagen */
-    
-        18% { margin-left: -100%; }       /* Transición a segunda imagen */
-        33% { margin-left: -100%; }       /* Mantener segunda imagen */
-    
-        35% { margin-left: -200%; }       /* Transición a tercera imagen */
-        50% { margin-left: -200%; }       /* Mantener tercera imagen */
-    
-        52% { margin-left: -300%; }       /* Transición a cuarta imagen */
-        67% { margin-left: -300%; }       /* Mantener cuarta imagen */
-    
-        69% { margin-left: -400%; }       /* Transición a quinta imagen */
-        84% { margin-left: -400%; }       /* Mantener quinta imagen */
-    
-        86% { margin-left: -500%; }       /* Transición a sexta imagen */
-        100% { margin-left: -500%; } 
-              /* Reinicio a la primera imagen */
-    }
-    
-    
-    }
-    
-    @media (max-width: 1350px){
-    
-        .slider-frame {
-            width: 95vw;
-            height: auto;
-            margin:50px auto 0;
-            margin-top: 0px;
-            overflow: hidden;
-            background-color: black;
-            
-        }
-        
-        .slider-frame ul {
-            display: flex;
-            padding: 0;
-            width: 600%;
-            background-color: black;
-            animation: slide 18s infinite alternate ease-in-out;
-        }
-        
-        .slider-frame li {
-            width: 100%;
-            list-style: none;
-        }
-        
-        .slider-frame img {
-            width: 100%;
-        }
-        
-        @keyframes slide {    0% { margin-left: 0; }            /* Primera imagen */
-        16% { margin-left: 0; }           /* Mantener primera imagen */
-    
-        18% { margin-left: -100%; }       /* Transición a segunda imagen */
-        33% { margin-left: -100%; }       /* Mantener segunda imagen */
-    
-        35% { margin-left: -200%; }       /* Transición a tercera imagen */
-        50% { margin-left: -200%; }       /* Mantener tercera imagen */
-    
-        52% { margin-left: -300%; }       /* Transición a cuarta imagen */
-        67% { margin-left: -300%; }       /* Mantener cuarta imagen */
-    
-        69% { margin-left: -400%; }       /* Transición a quinta imagen */
-        84% { margin-left: -400%; }       /* Mantener quinta imagen */
-    
-        86% { margin-left: -500%; }       /* Transición a sexta imagen */
-        100% { margin-left: -500%; } 
-        }
-        
-        
-        }
-        
-        
+  .sobreNosotrosTitle {
+    font-size: 3rem;
+    color: #ff8610;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+  }
+
+  .sobreNosotros {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    max-width: 60%;
+    margin: 0 auto 2rem;
+    text-align: justify;
+  }
+
+  .slider-frame {
+    width: 55%;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: black;
+    border-radius: 8px;
+  }
+
+  .slider-frame ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 600%;
+    animation: slide 18s infinite alternate ease-in-out;
+    list-style: none;
+  }
+
+  .slider-frame li {
+    width: 100%;
+  }
+
+  .slider-frame img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
+  }
+
+  @keyframes slide {
+    0% { margin-left: 0; }
+    16% { margin-left: 0; }
+    18% { margin-left: -100%; }
+    33% { margin-left: -100%; }
+    35% { margin-left: -200%; }
+    50% { margin-left: -200%; }
+    52% { margin-left: -300%; }
+    67% { margin-left: -300%; }
+    69% { margin-left: -400%; }
+    84% { margin-left: -400%; }
+    86% { margin-left: -500%; }
+    100% { margin-left: -500%; }
+  }
+}
+
+@media (max-width: 1350px) {
+  .divSobreNosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    background-color: black;
+    color: white;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .sobreNosotrosTitle {
+    font-size: clamp(2rem, 6vw, 3rem);
+    color: #ff8610;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+  }
+
+  .sobreNosotros {
+    font-size: clamp(1rem, 4vw, 1.25rem);
+    line-height: 1.6;
+    max-width: 90%;
+    margin: 0 auto;
+    font-weight: 400;
+    text-align: left;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .slider-frame {
+    width: 100vw;
+    max-width: 100%;
+    margin: 0 auto 2rem;
+    overflow: hidden;
+    background-color: black;
+    border-radius: 8px;
+  }
+
+  .slider-frame ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 600%;
+    animation: slide 18s infinite alternate ease-in-out;
+    list-style: none;
+  }
+
+  .slider-frame li {
+    flex: 0 0 100vw;
+  }
+
+  .slider-frame img {
+    width: 100vw;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
+  }
+
+  @keyframes slide {
+    0% { margin-left: 0; }
+    16% { margin-left: 0; }
+    18% { margin-left: -100vw; }
+    33% { margin-left: -100vw; }
+    35% { margin-left: -200vw; }
+    50% { margin-left: -200vw; }
+    52% { margin-left: -300vw; }
+    67% { margin-left: -300vw; }
+    69% { margin-left: -400vw; }
+    84% { margin-left: -400vw; }
+    86% { margin-left: -500vw; }
+    100% { margin-left: -500vw; }
+  }
+}
