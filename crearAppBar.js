@@ -111,44 +111,68 @@ item_selected = "";
 
 
 // Crear elementos de la lista y añadirlos al DOM
+const isMobile = window.matchMedia("(max-width: 900px)").matches;
+
 items.forEach(item => {
+  const li = document.createElement("li");
+  const a = document.createElement("a");
+  li.addEventListener("click", () => { item_selected = item.text });
+  a.href = item.href;
+  li.classList.add("has-submenu");
 
-    const li = document.createElement("li");
-    const a = document.createElement("a");
-    li.addEventListener("click", () => { item_selected = item.text });
-    a.href = item.href;
+  const span = document.createElement("span");
+  span.classList.add("icon", "icon-up-dir");
+  a.appendChild(document.createTextNode(item.text));
+  a.appendChild(span);
+  li.appendChild(a);
 
-    const span = document.createElement("span");
-    span.classList.add("icon", "icon-up-dir");
-    a.appendChild(document.createTextNode(item.text)); // Insertar el texto del elemento
-    a.appendChild(span);
-    li.appendChild(a);
+  if (item.subcategories) {
+    if (isMobile) {
+      // MOBILE: menú expandible
+      const submenuExpandible = document.createElement("div");
+      submenuExpandible.classList.add("submenu-expandible");
 
-    if (item.subcategories) {
-        const divSubmenu = document.createElement("div");
-        divSubmenu.classList.add("submenu");
+      item.subcategories.forEach(subItem => {
+        const subA = document.createElement("a");
+        subA.href = subItem.href;
+        subA.textContent = subItem.text;
+        submenuExpandible.appendChild(subA);
+      });
 
-        const divSubmenuItems = document.createElement("div");
-        divSubmenuItems.classList.add("submenu-items");
+      li.appendChild(submenuExpandible);
 
+      // Alternar visibilidad al hacer click
+      a.addEventListener("click", (e) => {
+        e.preventDefault();
+        li.classList.toggle("open");
+      });
+    } else {
+      // DESKTOP: submenu clásico
+      const divSubmenu = document.createElement("div");
+      divSubmenu.classList.add("submenu");
 
-        const ulSubmenu = document.createElement("ul");
-        item.subcategories.forEach(subItem => {
-            const subLi = document.createElement("li");
-            const subA = document.createElement("a");
-            subA.href = subItem.href;
-            subA.textContent = subItem.text;
-            subLi.appendChild(subA);
-            ulSubmenu.appendChild(subLi);
-        });
+      const divSubmenuItems = document.createElement("div");
+      divSubmenuItems.classList.add("submenu-items");
 
-        divSubmenuItems.appendChild(ulSubmenu);
-        divSubmenu.appendChild(divSubmenuItems);
-        li.appendChild(divSubmenu);
+      const ulSubmenu = document.createElement("ul");
+      item.subcategories.forEach(subItem => {
+        const subLi = document.createElement("li");
+        const subA = document.createElement("a");
+        subA.href = subItem.href;
+        subA.textContent = subItem.text;
+        subLi.appendChild(subA);
+        ulSubmenu.appendChild(subLi);
+      });
+
+      divSubmenuItems.appendChild(ulSubmenu);
+      divSubmenu.appendChild(divSubmenuItems);
+      li.appendChild(divSubmenu);
     }
+  }
 
-    ul.appendChild(li);
+  ul.appendChild(li);
 });
+
 
 nav.appendChild(navegacionMovilDiv);
 nav.appendChild(ul);

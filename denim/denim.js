@@ -19,7 +19,7 @@ function crearWidget(messi, i) {
   divImagen.classList.add('ropa-image');
 
   let img = document.createElement('img');
-  img.src = `../images/ropa/denim${i}.png`;
+  img.src = `../images/ropa/Denim${i}.png`;
   img.classList.add('imagen');
 
   divImagen.appendChild(img);
