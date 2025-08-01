@@ -1146,7 +1146,7 @@ li:focus-within > .submenu {
   }
 
   .logoImage {
-    height: 5rem;
+    height: 6rem;
     width: auto;
     object-fit: contain;
   }
